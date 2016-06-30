@@ -61,8 +61,8 @@ public:
 
 private: //yes, I add these variable as private, because they are not important
 	// Moreover, variable can be declare in header(.h), and define in either header(.h) or source(.cpp)
-	const int16_t maxServoAngle = 1105; 				//815+290
-	const int16_t minServoAngle = 525; 				//815-290;		// give a maximun& minimun angle for servo to turn
+	const int16_t maxServoAngle = 990; 				//820+170
+	const int16_t minServoAngle = 650; 				//820-170;		// give a maximun& minimun angle for servo to turn
 	const int16_t maxMotorSpeed = 850;
 	const int16_t minMotorSpeed = 60; 					// give a maximun& minimun PWM for motor to run
 

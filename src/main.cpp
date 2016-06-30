@@ -76,7 +76,7 @@ int main(void)
 	int16_t count2=0;
 
 //Test Ticks & Servo
-//	while(1){
+	while(1){
 //		sprintf(message,"Time: %d", (System::Time())/1000);
 //		trytryhaha.printvalue(0, 80, 128,40, message);
 //
@@ -89,15 +89,21 @@ int main(void)
 //				count2+=1;
 //			}
 //		}
-//
-//		trytryhaha.printvalue(0, 68, 128,40, "830");
-//		trytryhaha.servo_control(830);
-//		System::DelayMs(1200);
-//		trytryhaha.printvalue(0, 68, 128,40, "815");
-//		trytryhaha.servo_control(815);
-//		System::DelayMs(1200);
+//		820
+		trytryhaha.printvalue(0, 68, 128,40, "820-160");
+		trytryhaha.servo_control(820-160);
+		System::DelayMs(1200);
+		trytryhaha.printvalue(0, 68, 128,40, "820");
+		trytryhaha.servo_control(820);
+		System::DelayMs(1200);
+		trytryhaha.printvalue(0, 68, 128,40, "820+170");
+		trytryhaha.servo_control(820+170);
+		System::DelayMs(1200);
+		trytryhaha.printvalue(0, 68, 128,40, "820");
+		trytryhaha.servo_control(820);
+		System::DelayMs(1200);
 
-//	}
+	}
 
 	while(1){
 
@@ -121,39 +127,36 @@ int main(void)
 
 		}
 		*/
+		if(cur_Time!=System::Time()){
+
 		//JUST PRINT RAW:
-		trytryhaha.get_raw_image();
-		trytryhaha.imageCorrection(trytryhaha.data);
-//		trytryhaha.rawimgprocess();
-		trytryhaha.printRawCamGraph(0,0);
-//		trytryhaha.printavgimage(trytryhaha.data, trytryhaha.processmap);
+		cur_Time = System::Time();
+		if((int16_t)(cur_Time%10)==0){
+			trytryhaha.get_raw_image();
+			trytryhaha.imageCorrection(trytryhaha.data);
+			trytryhaha.printRawCamGraph(0,0);
 
-		value = trytryhaha.CheckLightIndex(trytryhaha.data);
+			value = trytryhaha.CheckLightIndex(trytryhaha.data);
+			state = trytryhaha.get_RState();
 
-		//trytryhaha.STATE = trytryhaha.get_RunState();
-		state = trytryhaha.get_RState();
+			trytryhaha.RUN_STATE(state);
 
-		trytryhaha.RUN_STATE(state);
-		sprintf(message, "state %d", state);
-		trytryhaha.printvalue(0, 132, 128,40, message);
+			int16_t val = (int16_t) value;
+			int16_t lightindex = (int16_t) trytryhaha.LightIndex[trytryhaha.rowIndex];
 
-		int16_t val = (int16_t) value;
-		int16_t lightindex = (int16_t) trytryhaha.LightIndex[trytryhaha.rowIndex];
-		//degree = trytryhaha.turningPID(val, lightindex);
+			//PRINT MID, DEGREE & MARGIN
+			sprintf(message, "L mid @%d", value);
+			trytryhaha.printvalue(0, 68, 128,40, message);
+			sprintf(message, "state %d", state);
+			trytryhaha.printvalue(0, 132, 128,40, message);
+	//		sprintf(message, "Degree @%d", degree);
+	//		trytryhaha.printCar(message, 132);
+			sprintf(message, "L%d R%d", trytryhaha.l_margin, trytryhaha.r_margin);
+			trytryhaha.printvalue(0, 84, 128,40, message);
 
-		//trytryhaha.servo_control(degree);
-
-		sprintf(message, "L mid @%d", value);
-		trytryhaha.printvalue(0, 68, 128,40, message);
-
-//		sprintf(message, "Degree @%d", degree);
-//		trytryhaha.printCar(message, 132);
-
-		sprintf(message, "L%d R%d", trytryhaha.l_margin, trytryhaha.r_margin);
-		trytryhaha.printvalue(0, 84, 128,40, message);
-//		trytryhaha.findLight(trytryhaha.processmap, trytryhaha.processmap, 10);
-
-		System::DelayMs(10);
+		//System::DelayMs(10);
+		}
+		}
 
 	}
 
