@@ -75,34 +75,20 @@ int main(void)
 	int16_t count1=0;
 	int16_t count2=0;
 
-	while(1){
-		sprintf(message,"Time: %d", (System::Time())/1000);
-		trytryhaha.printvalue(0, 80, 128,40, message);
-
-		while(System::Time()<1005){
-		if(cur_Time!=System::Time()){
-//			cur_Time = System::Time();
-//			if((int16_t) (cur_Time - pastTime) >=5){
-//				pastTime = cur_Time;
+//Test Ticks & Servo
+//	while(1){
+//		sprintf(message,"Time: %d", (System::Time())/1000);
+//		trytryhaha.printvalue(0, 80, 128,40, message);
+//
+//		if(cur_Time!=System::Time()){
+//			if((int16_t) (cur_Time%50) ==0){
+//				//pastTime = cur_Time;
 //				count1+=1;
 //			}
-			cur_Time = System::Time();
-			if((int16_t) (cur_Time%20) ==0){
-				//pastTime= cur_Time;
-				count2+=1;
-			}
-
-
-		}
-		}
-		sprintf(message, "count10 %d", count1);
-		trytryhaha.printvalue(0, 100, 128,40, message);
-		sprintf(message, "count20 %d", count2);
-		trytryhaha.printvalue(0, 120, 128,40, message);
-
-	}
-
-//	while(1){
+//			if((int16_t) (cur_Time%20) ==0){
+//				count2+=1;
+//			}
+//		}
 //
 //		trytryhaha.printvalue(0, 68, 128,40, "830");
 //		trytryhaha.servo_control(830);
@@ -110,29 +96,7 @@ int main(void)
 //		trytryhaha.printvalue(0, 68, 128,40, "815");
 //		trytryhaha.servo_control(815);
 //		System::DelayMs(1200);
-//		trytryhaha.printvalue(0, 68, 128,40, "800");
-//		trytryhaha.servo_control(800);
-//		System::DelayMs(1200);
-//
-////		trytryhaha.servo_control(800);
-////		trytryhaha.printvalue(0, 68, 128,40, "0 0");
-////		trytryhaha.motor_control(0,0);
-////		System::DelayMs(1000);
-////		trytryhaha.printvalue(0, 68, 128,40, "0 100");
-////		trytryhaha.motor_control(100,0);
-////		System::DelayMs(1000);
-////		trytryhaha.printvalue(0, 68, 128,40, "0 0");
-////		trytryhaha.motor_control(0,0);
-////		System::DelayMs(1000);
-////		trytryhaha.printvalue(0, 68, 128,40, "1 0");
-////		trytryhaha.motor_control(0,1);
-////		System::DelayMs(1000);
-////		trytryhaha.printvalue(0, 68, 128,40, "1 100");
-////		trytryhaha.motor_control(100,1);
-////		System::DelayMs(1000);
-////		trytryhaha.printvalue(0, 68, 128,40, "1 0");
-////		trytryhaha.motor_control(0,1);
-////		System::DelayMs(1000);
+
 //	}
 
 	while(1){
