@@ -25,48 +25,60 @@ using namespace libutil;
 
 int main(void)
 {
-
-//code for ploting graph for a equation of y = mx +c, where y and x are encoder counting or motor PWM
-//uncomment for usage
-/*
-	//tune encoder here
-	//to uncomment this code, comment all pVarManager object
-	JyMcuBt106::Config config;
-	config.id = 0;
-	config.baud_rate = libbase::k60::Uart::Config::BaudRate::k115200;
-	config.rx_irq_threshold = 2;
-	JyMcuBt106 fuck(config);
-	char *PWM_buffer = new char[120]{0};
-	float encoder_counting = 0;
-	int motor_speed =0;
- while(1){
-	 motor_speed += 1;
-	 Run.motor_control(motor_speed,true);
-	 Run.update_encoder();
-	 System::DelayMs(30);
-	 Run.update_encoder();
-
-	 encoder_counting = Run.get_encoder_count();
-	 int n = sprintf(PWM_buffer,"%d %d \n",(int)motor_speed,(int)encoder_counting);
-	 fuck.SendBuffer((Byte*)PWM_buffer,n);
-	 memset(PWM_buffer,0,n);
-	 if (motor_speed > 500) {	 Run.motor_control(0,true);while(1);}
-	 System::DelayMs(20);
- }
- */
-
-
-	//-------------------------------------your code below----------------------------------------//
-
 	System::Init();
 	//must init for using LCD and anything that contain function inside "System"
 	//use tick
 	//...
 	//Car *trycar;
 	RunMode trytryhaha;
+	char message[22];
+
+//code for ploting graph for a equation of y = mx +c, where y and x are encoder counting or motor PWM
+//uncomment for usage
+
+	//tune encoder here
+	//to uncomment this code, comment all pVarManager object
+	JyMcuBt106::Config config;
+	config.id = 1;
+	config.baud_rate = libbase::k60::Uart::Config::BaudRate::k115200;
+	config.rx_irq_threshold = 2;
+	JyMcuBt106 fuck(config);
+//	char *PWM_buffer = new char[120]{0};
+//	float encoder_counting = 0;
+//	int motor_speed =0;
+//	char message[22];
+//	System::DelayMs(5000);
+// while(1){
+//	 motor_speed += 1;
+//	 trytryhaha.motor_control(motor_speed,true);
+//	 trytryhaha.update_encoder();
+//	 System::DelayMs(30);
+//	 trytryhaha.update_encoder();
+//
+//	 encoder_counting = trytryhaha.get_encoder_count();
+//	 int n = sprintf(PWM_buffer,"%d %d \n",(int)motor_speed,(int)encoder_counting);
+//	 fuck.SendBuffer((Byte*)PWM_buffer,n);
+//	 memset(PWM_buffer,0,n);
+//	 if (motor_speed > 350) {	 trytryhaha.motor_control(0,true);while(1);}
+//	 System::DelayMs(20);
+// }
+
+ /*
+  * Encoder motor formula:
+  * Encoder_count = 17.308 * motor - 345.504
+  */
+
+
+	//-------------------------------------your code below----------------------------------------//
+
+//	System::Init();
+	//must init for using LCD and anything that contain function inside "System"
+	//use tick
+	//...
+	//Car *trycar;
+//	RunMode trytryhaha;
 	Timer::TimerInt cur_Time=0;
 	Timer::TimerInt pastTime=0;
-	char message[22];
 	uint16_t distance;
 	int8_t value;
 	int8_t state;
@@ -76,7 +88,7 @@ int main(void)
 	int16_t count2=0;
 
 //Test Ticks & Servo
-	while(1){
+//	while(1){
 //		sprintf(message,"Time: %d", (System::Time())/1000);
 //		trytryhaha.printvalue(0, 80, 128,40, message);
 //
@@ -90,20 +102,20 @@ int main(void)
 //			}
 //		}
 //		820
-		trytryhaha.printvalue(0, 68, 128,40, "820-160");
-		trytryhaha.servo_control(820-160);
-		System::DelayMs(1200);
-		trytryhaha.printvalue(0, 68, 128,40, "820");
-		trytryhaha.servo_control(820);
-		System::DelayMs(1200);
-		trytryhaha.printvalue(0, 68, 128,40, "820+170");
-		trytryhaha.servo_control(820+170);
-		System::DelayMs(1200);
-		trytryhaha.printvalue(0, 68, 128,40, "820");
-		trytryhaha.servo_control(820);
-		System::DelayMs(1200);
-
-	}
+//		trytryhaha.printvalue(0, 68, 128,40, "820-160");
+//		trytryhaha.servo_control(820-160);
+//		System::DelayMs(1200);
+//		trytryhaha.printvalue(0, 68, 128,40, "820");
+//		trytryhaha.servo_control(820);
+//		System::DelayMs(1200);
+//		trytryhaha.printvalue(0, 68, 128,40, "820+170");
+//		trytryhaha.servo_control(820+170);
+//		System::DelayMs(1200);
+//		trytryhaha.printvalue(0, 68, 128,40, "820");
+//		trytryhaha.servo_control(820);
+//		System::DelayMs(1200);
+//
+//	}
 
 	while(1){
 

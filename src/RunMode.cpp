@@ -6,7 +6,7 @@
  */
 #include "car.h"
 #include "RunMode.h"
-#define SERVO_MID 800
+#define SERVO_MID 820
 
 
 RunMode::RunMode():
@@ -25,8 +25,8 @@ int16_t RunMode::turningPID (int16_t mid_line, int16_t value){
 	servoErr = mid_line-value;
 	//float kp, ki, kd;
 
-	s_lkp = 1.78f;
-	s_rkp = 1.78f;
+	s_lkp = 1.38f;
+	s_rkp = 1.38f;
 	s_lkd = 10.0f;
 	s_rkd = 10.0f;
 
@@ -78,15 +78,32 @@ int16_t RunMode::turningPID (int16_t mid_line, int16_t value){
 }
 
 int16_t RunMode::motorPID (int16_t ideal_encoder_count){
-	//encoder->Update();
-	//get_encoder_count();
 
-	//motorErr =
+	m_Kp = 0.45f;
+	m_Ki = 0.03f;
+
+	encoder_count = get_encoder_count();
+	if(encoder_count ==0){
+		//Reverse turn at speed 80
+		ideal_motor_speed=80;
+		is_clockwise = false;
+		ideal_servo_degree = (ideal_servo_degree > SERVO_MID) ? (SERVO_MID - (ideal_servo_degree-SERVO_MID)) : (SERVO_MID + ideal_servo_degree - SERVO_MID);
+		servo_control(ideal_servo_degree);
+		motor_control(ideal_motor_speed,is_clockwise);
+		return ideal_motor_speed;
+	}
+	if(abs(encoder_count)>2200){
+		encoder_count = ideal_motor_speed;
+	}
+	motorErr = (int16_t)(encoder_count - ideal_encoder_count);
+	//relationship between motorerr & servoerr?
+
+	ideal_motor_speed = ideal_motor_speed + m_Kp * (motorErr - motorPrevErr) + m_Ki * (motorErr);
 
 
+	motorPrevErr = motorErr;
 
-
-	return 0;//your implementation
+	return ideal_motor_speed;//your implementation
 	// tips, remember to add something to protect your motor, for example:
 	// e.g. 1) add a simple if-statement, if encoder count is near zero for 1~2s, stop the motor
 	// e.g. 2) if the car are sure its crazy, stop motor

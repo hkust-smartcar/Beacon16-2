@@ -47,7 +47,7 @@ public:
 	int32_t encoder_count;
 	int16_t distance_to_beacon, ultrasonic_dist;
 	int16_t servoErr, servoPrevErr;
-	int16_t motorErr;
+	int16_t motorErr, motorPrevErr;
 
 	float s_lkp;
 	float s_lkd;
@@ -56,6 +56,8 @@ public:
 
 	float m_Kp;
 	float m_Ki;
+
+	bool is_clockwise = true;
 
 
 

@@ -97,6 +97,7 @@ public:
 	int8_t CheckLightIndex(const Byte*);
 	void imageCorrection(const Byte*);
 	void RUN_STATE(int8_t);
+	void exitState(int8_t);
 	uint16_t u_distance();
 
 	virtual int16_t turningPID (int16_t, int16_t){return 0; };

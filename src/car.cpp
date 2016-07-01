@@ -394,6 +394,14 @@ int8_t Car::get_RState(){
 	}
 	return state;
 }
+/*
+ * Encoder motor formula:
+ * Encoder_count = 17.308 * motor - 345.504
+ */
+
+void Car::exitState(int8_t state){
+
+}
 
 void Car::RUN_STATE(int8_t state){
 	switch (state){
@@ -434,23 +442,27 @@ void Car::RUN_STATE(int8_t state){
 	case 4:
 	{
 		//turn left / right slowly
-//		if(temp%2){
-//			servo_control(950);
-//		}else{
-//			servo_control(650);
-//		}
-//		temp+=1;
-		servo_control(1000);
-		motor_control(100,1);
-//		if(temp>100){
-//			temp=0;
-//		}
+		if(temp>65){
+			servo_control(950);
+		}else{
+			servo_control(650);
+		}
+		temp+=1;
+//		servo_control(950);
+//		motor_control(100,1);
+		if(temp>120){
+			temp=0;
+		}
 		break;
+	}
+	case 5:
+	{
+		servo_control(660);
+		motor_control(100,1);
 	}
 	default:
 	{
-		servo_control(700);
-		motor_control(100,1);
+
 	}
 	}
 }
