@@ -87,7 +87,7 @@ int16_t RunMode::motorPID (int16_t ideal_encoder_count){
 		//Reverse turn at speed 80
 		ideal_motor_speed=80;
 		is_clockwise = false;
-		ideal_servo_degree = (ideal_servo_degree > SERVO_MID) ? (SERVO_MID - (ideal_servo_degree-SERVO_MID)) : (SERVO_MID + ideal_servo_degree - SERVO_MID);
+		ideal_servo_degree = (ideal_servo_degree > SERVO_MID) ? (SERVO_MID - (ideal_servo_degree-SERVO_MID)) : (SERVO_MID + (ideal_servo_degree - SERVO_MID));
 		servo_control(ideal_servo_degree);
 		motor_control(ideal_motor_speed,is_clockwise);
 		return ideal_motor_speed;
