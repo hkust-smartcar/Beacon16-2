@@ -118,27 +118,6 @@ int main(void)
 //	}
 
 	while(1){
-
-		/*
-		int16_t count1=0;
-		int16_t count2=0;
-		if(cur_Time!=System::Time()){
-			cur_Time = System::Time();
-			if((int32_t) (cur_Time - pastTime) >=20){
-				pastTime = cur_Time;
-				count1+=1;
-				sprintf(message, "count20 %d", count1);
-				trytryhaha.printvalue(0, 132, 128,40, message);
-			}
-			if((int32_t) (cur_Time - pastTime) >=10){
-				pastTime= cur_Time;
-				count2+=1;
-				sprintf(message, "count10 %d", count2);
-				trytryhaha.printvalue(0, 132, 128,40, message);
-			}
-
-		}
-		*/
 		if(cur_Time!=System::Time()){
 
 		//JUST PRINT RAW:
@@ -168,6 +147,12 @@ int main(void)
 
 		//System::DelayMs(10);
 		}
+
+		if((int16_t)(cur_Time%30)==0){
+			trytryhaha.update_encoder();
+			//trytryhaha.encoder->Update();
+		}
+
 		}
 
 	}

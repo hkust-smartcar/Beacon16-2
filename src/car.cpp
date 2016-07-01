@@ -374,7 +374,7 @@ uint16_t Car::u_distance(){
 
 int8_t Car::get_RState(){
 	//distance_to_beacon = (60-rowIndex);
-//	RunState state;
+	//RunState state;
 	int8_t state=4;
 	//STATE = LOCATING;
 	if (distance_to_beacon<81){
@@ -397,6 +397,7 @@ int8_t Car::get_RState(){
 /*
  * Encoder motor formula:
  * Encoder_count = 17.308 * motor - 345.504
+ *
  */
 
 void Car::exitState(int8_t state){
@@ -411,10 +412,10 @@ void Car::RUN_STATE(int8_t state){
 		//if right-> turn more right, if left->turn more left
 		if(mid<40){
 			//keep beacon on left hand side
-			turningPID(mid, 6);
+			turningPID(mid, 8);
 		}
 		if(mid>39){
-			turningPID(mid,64);
+			turningPID(mid,68);
 		}
 		motor_control(150,1);
 		break;
@@ -442,7 +443,7 @@ void Car::RUN_STATE(int8_t state){
 	case 4:
 	{
 		//turn left / right slowly
-		if(temp>65){
+		if(temp<200){
 			servo_control(950);
 		}else{
 			servo_control(650);
@@ -450,7 +451,7 @@ void Car::RUN_STATE(int8_t state){
 		temp+=1;
 //		servo_control(950);
 //		motor_control(100,1);
-		if(temp>120){
+		if(temp>400){
 			temp=0;
 		}
 		break;
@@ -459,10 +460,11 @@ void Car::RUN_STATE(int8_t state){
 	{
 		servo_control(660);
 		motor_control(100,1);
+		break;
 	}
 	default:
 	{
-
+		motor_control(130,1);
 	}
 	}
 }

@@ -139,7 +139,7 @@ public:
 	int8_t rowIndex;
 	int8_t LightIndex[60];
 	uint16_t distance_to_beacon;
-	int8_t temp=0;
+	int16_t temp=0;
 
 	int8_t mid = 0;
 
