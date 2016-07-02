@@ -25,6 +25,7 @@ using namespace libutil;
 
 int main(void)
 {
+	int8_t encoderZeroCount =0;
 	System::Init();
 	//must init for using LCD and anything that contain function inside "System"
 	//use tick
@@ -83,7 +84,8 @@ int main(void)
 	int8_t value;
 	int8_t state;
 	int16_t degree;
-	trytryhaha.servo_control(900);
+	trytryhaha.servo_control(820);
+	trytryhaha.motor_control(80,1);
 	int16_t count1=0;
 	int16_t count2=0;
 
@@ -122,10 +124,10 @@ int main(void)
 
 		//JUST PRINT RAW:
 		cur_Time = System::Time();
-		if((int16_t)(cur_Time%10)==0){
+		if((int16_t)(cur_Time%10) > 0){
 			trytryhaha.get_raw_image();
 			trytryhaha.imageCorrection(trytryhaha.data);
-			trytryhaha.printRawCamGraph(0,0);
+//			trytryhaha.printRawCamGraph(0,0);
 
 			value = trytryhaha.CheckLightIndex(trytryhaha.data);
 			state = trytryhaha.get_RState();
@@ -136,29 +138,39 @@ int main(void)
 			int16_t lightindex = (int16_t) trytryhaha.LightIndex[trytryhaha.rowIndex];
 
 			//PRINT MID, DEGREE & MARGIN
-			sprintf(message, "L mid @%d", value);
-			trytryhaha.printvalue(0, 68, 128,40, message);
-			sprintf(message, "state %d", state);
-			trytryhaha.printvalue(0, 132, 128,40, message);
-	//		sprintf(message, "Degree @%d", degree);
-	//		trytryhaha.printCar(message, 132);
-			sprintf(message, "L%d R%d", trytryhaha.l_margin, trytryhaha.r_margin);
-			trytryhaha.printvalue(0, 84, 128,40, message);
+//			sprintf(message, "L mid @%d", value);
+//			trytryhaha.printvalue(0, 68, 128,40, message);
+//			sprintf(message, "state %d", state);
+//			trytryhaha.printvalue(0, 132, 128,40, message);
+//			sprintf(message, "Degree @%d", trytryhaha.ideal_servo_degree);
+//			trytryhaha.printCar(message, 116);
+//			sprintf(message, "Speed %d", trytryhaha.ideal_motor_speed);
+//			trytryhaha.printvalue(0, 84, 128,40, message);
 
 		//System::DelayMs(10);
 		}
 
-		if((int16_t)(cur_Time%30)==0){
+		if((int16_t)(cur_Time%30)>0){
 			trytryhaha.update_encoder();
+
+		if(!trytryhaha.get_encoder_count()){
+			encoderZeroCount++;
+		}else encoderZeroCount = 0;
+
+		if (encoderZeroCount > 2){
+			trytryhaha.motor_control(150,false);
+			if(trytryhaha.ideal_servo_degree >820) trytryhaha.servo_control(820-150);
+			else trytryhaha.servo_control(820+150);
+
+		System::DelayMs(1000);
+		}
 			//trytryhaha.encoder->Update();
 		}
 
-		}
-
+	}
 	}
 
 //	for(;;){}
-	trytryhaha.~RunMode();
 	//trycar->cam->Stop();
 	return 0;
 }

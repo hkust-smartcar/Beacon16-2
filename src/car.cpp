@@ -281,8 +281,8 @@ int8_t Car::CheckLightIndex(const Byte* src){
 				rowIndex=y;
 			}
 	}
-	sprintf(msg,"MAX %d RowIn %d", LightIndex[rowIndex], rowIndex);
-	printCar(msg, 100);
+//	sprintf(msg,"MAX %d RowIn %d", LightIndex[rowIndex], rowIndex);
+//	printCar(msg, 100);
 
 	if (rowIndex==0 && LightIndex[rowIndex]<5){
 		//no white found
@@ -326,8 +326,8 @@ int8_t Car::CheckLightIndex(const Byte* src){
 		 	}
 		 	r_margin = x;
 			//x = r_margin+1;
-			sprintf(msg,"l@%d r@%d", l_margin, r_margin);
-			printCar(msg, 116);
+//			sprintf(msg,"l@%d r@%d", l_margin, r_margin);
+//			printCar(msg, 116);
 			if(r_margin < l_margin){
 				//impossible
 				//code 100
@@ -378,7 +378,7 @@ int8_t Car::get_RState(){
 	int8_t state=4;
 	//STATE = LOCATING;
 	if (distance_to_beacon<81){
-		if(distance_to_beacon < 30){
+		if(distance_to_beacon < 27){
 			//state = AVOID;
 			state=1;
 		}else if(distance_to_beacon < 45){
@@ -405,68 +405,85 @@ void Car::exitState(int8_t state){
 }
 
 void Car::RUN_STATE(int8_t state){
+//	if(prevState==1 && state==4){
+////		if(temp%2){
+////			servo_control(970);
+////		}else{
+//			servo_control(600);
+////		}
+//		motor_control(motorPID(2510),1);
+//		state=5;
+//	}
 	switch (state){
 
 	case 1:
 	{
 		//if right-> turn more right, if left->turn more left
-		if(mid<40){
-			//keep beacon on left hand side
-			turningPID(mid, 8);
-		}
-		if(mid>39){
-			turningPID(mid,68);
-		}
-		motor_control(150,1);
+//		if(mid<40){
+//			//keep beacon on left hand side
+//			turningPID(mid, 10);
+//
+//		}
+//		if(mid>39){
+			turningPID(mid,70);
+//		}
+		motor_control(motorPID(1500),1);
+		//motor_control(150,1);
 		break;
 	}
 	case 2:
 		{
 			//turn left / right around the beacon
-			if(mid<40){
-				//keep beacon on left hand side
-				turningPID(mid, 10);
-			}
-			if(mid>39){
-				turningPID(mid,70);
-			}
-			motor_control(130,1);
+//			if(mid<40){
+//				//keep beacon on left hand side
+//				turningPID(mid, 20);
+//			}
+//			if(mid>39){
+				turningPID(mid,50);
+//			}
+			motor_control(motorPID(1905),1);
+			//motor_control(130,1);
 			break;
 		}
 	case 3:
 	{
 		//normal PID
 		turningPID(mid,40);
-		motor_control(165,1);
+		motor_control(motorPID(2510),1);
+		//motor_control(165,1);
 		break;
 	}
 	case 4:
 	{
 		//turn left / right slowly
-		if(temp<200){
-			servo_control(950);
-		}else{
-			servo_control(650);
-		}
+//		if(temp<100){
+//			servo_control(970);
+//		}else{
+			servo_control(600);
+//		}
 		temp+=1;
+		motor_control(motorPID(1905),1);
 //		servo_control(950);
 //		motor_control(100,1);
-		if(temp>400){
+		if(temp>200){
 			temp=0;
 		}
 		break;
 	}
 	case 5:
 	{
-		servo_control(660);
-		motor_control(100,1);
+		//servo_control(660);
+		motor_control(motorPID(1385),1);
 		break;
 	}
 	default:
 	{
-		motor_control(130,1);
+		servo_control(820);
+		motor_control(motorPID(1905),1);
+		//motor_control(130,1);
 	}
 	}
+	prevState=state;
 }
 
 //modify the black value=0; white value = 1;

@@ -10,7 +10,7 @@
 
 
 RunMode::RunMode():
-servoErr(0), servoPrevErr(0), maxMotorSpeed(600), minMotorSpeed(0), ideal_servo_degree(0), encoder_count(0), motorErr(0){
+servoErr(0), servoPrevErr(0), ideal_motor_speed(80), maxMotorSpeed(350), minMotorSpeed(80), ideal_servo_degree(SERVO_MID), encoder_count(0), motorErr(0), motorPrevErr(0), maxServoAngle(990), minServoAngle(580){
 	//can initialize the variable here,
 }
 
@@ -42,36 +42,9 @@ int16_t RunMode::turningPID (int16_t mid_line, int16_t value){
 
 	servoPrevErr = servoErr;
 
-//	//value threshold shou be 30
-//	if(value < 35){
-//		motor_control(100,1);
-//		if(mid_line > 80){
-//			return SERVO_MID; //mid:800
-//		}else{
-//			if(mid_line > 40){
-//				degree = 800 + 265 * mid_line / 40;
-//			}
-//			if(mid_line < 41){
-//				degree = 800 - 265 * (40-mid_line)/40;
-//				//degree = 650;
-//			}
-//		}
-//	}else{
-//		//BEACON IS INFRONT OF CAR
-//		motor_control(0,1);
-//		if(mid_line<40){
-//			//turn very left in circle around beacon
-//			degree = 800 - 265;
-//
-//		}else{
-//			//turn very right in circle around beacon
-//			degree = 800 + 265;
-//
-//		}
-//	}
 
-	sprintf(msg, "Degree @%d", ideal_servo_degree);
-	printCar(msg, 132);
+//	sprintf(msg, "Degree @%d", ideal_servo_degree);
+//	printCar(msg, 132);
 	return ideal_servo_degree;
 	//return 0;//your implementation
 
@@ -80,26 +53,37 @@ int16_t RunMode::turningPID (int16_t mid_line, int16_t value){
 int16_t RunMode::motorPID (int16_t ideal_encoder_count){
 
 	m_Kp = 0.45f;
-	m_Ki = 0.03f;
-
+	m_Ki = 0.05f;
+/*
+ * 1905
+ * 1385
+ * 2510vgtygg
+ * 2250
+ */
 	encoder_count = get_encoder_count();
-	if(encoder_count ==0){
-		//Reverse turn at speed 80
-		ideal_motor_speed=80;
-		is_clockwise = false;
+	if(!encoder_count){
+		//Reverse turn at speed 120
+		ideal_motor_speed=120;
+		is_clockwise = 0;
 		ideal_servo_degree = (ideal_servo_degree > SERVO_MID) ? (SERVO_MID - (ideal_servo_degree-SERVO_MID)) : (SERVO_MID + (ideal_servo_degree - SERVO_MID));
 		servo_control(ideal_servo_degree);
 		motor_control(ideal_motor_speed,is_clockwise);
-		return ideal_motor_speed;
+		return 0;
 	}
-	if(abs(encoder_count)>2200){
-		encoder_count = ideal_motor_speed;
+	if(abs(encoder_count)>5500){
+			return 0;
+		}
+	if(abs(encoder_count)>2500){
+		encoder_count = ideal_encoder_count;
 	}
-	motorErr = (int16_t)(encoder_count - ideal_encoder_count);
+
+	motorErr = (int16_t)(ideal_encoder_count - encoder_count);
 	//relationship between motorerr & servoerr?
-
+	//(m_varset.ideal_encoder_count- (m_varset.ideal_encoder_count == 0 ? 0 : m_varset.KDec * abs(ServoErr))) - encodercount);
+	//17.308 * motor - 345.504
+	temp = ((float)ideal_encoder_count + 345.504)/17.308;
+	ideal_motor_speed = (int16_t) temp;
 	ideal_motor_speed = ideal_motor_speed + m_Kp * (motorErr - motorPrevErr) + m_Ki * (motorErr);
-
 
 	motorPrevErr = motorErr;
 
@@ -121,8 +105,9 @@ void RunMode::motor_control(uint16_t power, bool is_clockwise_rotating){
 void RunMode::servo_control(int16_t degree){
 	if(degree > maxServoAngle ) degree = maxServoAngle;
 	if(degree < minServoAngle ) degree = minServoAngle;
-	ideal_servo_degree = degree + 900;
+	//ideal_servo_degree = degree + 900;
 	//servo->SetDegree(ideal_servo_degree);
+	ideal_servo_degree = degree;
 	servo->SetDegree(degree);
 }
 
