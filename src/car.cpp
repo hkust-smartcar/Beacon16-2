@@ -281,8 +281,7 @@ int8_t Car::CheckLightIndex(const Byte* src){
 				rowIndex=y;
 			}
 	}
-//	sprintf(msg,"MAX %d RowIn %d", LightIndex[rowIndex], rowIndex);
-//	printCar(msg, 100);
+
 
 	if (rowIndex==0 && LightIndex[rowIndex]<5){
 		//no white found
@@ -298,36 +297,15 @@ int8_t Car::CheckLightIndex(const Byte* src){
 
 	for(int8_t x=2; x<78; x++){
 
-//		//
-//		if(!processmap[rowIndex][x]){
-//			l_margin = x;
-//			x+=1;
-//			while(!processmap[rowIndex][x] && x<78){
-//				x+=1;
-//			}
-//			r_margin = x;
-//			x= r_margin+1;
-//			if ((r_margin-l_margin)<tempDist){
-//				break;
-//			}else{
-//				tempDist= r_margin - l_margin;
-//				LightX = l_margin;
-//				LightW = r_margin;
-//			}
-//		}
-//		//
-
 		 if(GetPixel(src, x, rowIndex)){
 		 	l_margin = x;
 			x+=1;
 		 	while(GetPixel(src, x, rowIndex) && x<78){
 		 		x+=1;
-		 		//l_margin = rowIndex;
+
 		 	}
 		 	r_margin = x;
-			//x = r_margin+1;
-//			sprintf(msg,"l@%d r@%d", l_margin, r_margin);
-//			printCar(msg, 116);
+
 			if(r_margin < l_margin){
 				//impossible
 				//code 100
@@ -335,12 +313,11 @@ int8_t Car::CheckLightIndex(const Byte* src){
 			}
 			if((r_margin - l_margin) < tempDist){
 				x = r_margin;
-				//continue;
+
 			}else{
 				tempDist = r_margin - l_margin;
 				LightX = l_margin;
 				LightW = r_margin;
-				//x= r_margin+1;
 			}
 
 		 }
@@ -375,7 +352,7 @@ uint16_t Car::u_distance(){
 int8_t Car::get_RState(){
 	//distance_to_beacon = (60-rowIndex);
 	//RunState state;
-	int8_t state=4;
+	int8_t state=0;
 	//STATE = LOCATING;
 	if (distance_to_beacon<81){
 		if(distance_to_beacon < 27){
@@ -392,6 +369,10 @@ int8_t Car::get_RState(){
 		//STATE = LOCATING;
 		state=4;
 	}
+	if(prevState==1 && state==4){
+		state=5;
+	}
+	prevState= state;
 	return state;
 }
 /*
@@ -421,13 +402,15 @@ void Car::RUN_STATE(int8_t state){
 		//if right-> turn more right, if left->turn more left
 //		if(mid<40){
 //			//keep beacon on left hand side
-//			turningPID(mid, 10);
+//			//turningPID(mid, 10);
+			turningPID(mid, r_margin+25);
 //
 //		}
 //		if(mid>39){
-			turningPID(mid,70);
+//			//turningPID(mid,70);
+//			turningPID(mid, l_margin-23);
 //		}
-		motor_control(motorPID(1500),1);
+		motorPID(1100);
 		//motor_control(150,1);
 		break;
 	}
@@ -436,20 +419,22 @@ void Car::RUN_STATE(int8_t state){
 			//turn left / right around the beacon
 //			if(mid<40){
 //				//keep beacon on left hand side
-//				turningPID(mid, 20);
+//				turningPID(mid, 14);
 //			}
 //			if(mid>39){
-				turningPID(mid,50);
+//				turningPID(mid,66);
 //			}
-			motor_control(motorPID(1905),1);
+			turningPID(mid, r_margin+13);
+			motorPID(1300);
 			//motor_control(130,1);
 			break;
 		}
 	case 3:
 	{
 		//normal PID
-		turningPID(mid,40);
-		motor_control(motorPID(2510),1);
+		//turningPID(mid,40);
+		turningPID(mid, r_margin+13);
+		motorPID(1500);
 		//motor_control(165,1);
 		break;
 	}
@@ -461,25 +446,25 @@ void Car::RUN_STATE(int8_t state){
 //		}else{
 			servo_control(600);
 //		}
-		temp+=1;
-		motor_control(motorPID(1905),1);
+//		temp+=1;
+		motorPID(1500);
 //		servo_control(950);
 //		motor_control(100,1);
-		if(temp>200){
-			temp=0;
-		}
+//		if(temp>200){
+//			temp=0;
+//		}
 		break;
 	}
 	case 5:
 	{
-		//servo_control(660);
-		motor_control(motorPID(1385),1);
+		servo_control(670);
+		motorPID(1000);
 		break;
 	}
 	default:
 	{
 		servo_control(820);
-		motor_control(motorPID(1905),1);
+		motorPID(1500);
 		//motor_control(130,1);
 	}
 	}

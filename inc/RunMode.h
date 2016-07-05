@@ -44,10 +44,14 @@ public:
 	//to access the public variable, you can use (obj_name).(var_name) to access
 
 	int16_t ideal_servo_degree, ideal_motor_speed;
+	int16_t actual_encoder_target = 0;
 	int32_t encoder_count;
 	int16_t servoErr, servoPrevErr;
 	int16_t motorErr, motorPrevErr;
-
+	int16_t motorSum = 0;
+	int16_t Ideal_encoder_count = 0;
+	//int8_t encoderPrevZeroCount;
+	int8_t encoderZeroCount;
 	float s_lkp;
 	float s_lkd;
 	float s_rkp;
@@ -55,6 +59,7 @@ public:
 
 	float m_Kp;
 	float m_Ki;
+	float m_kd;
 
 	bool is_clockwise = true;
 	float temp=0;

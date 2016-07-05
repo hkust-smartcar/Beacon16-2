@@ -79,6 +79,8 @@ int main(void)
 	//Car *trycar;
 //	RunMode trytryhaha;
 	Timer::TimerInt cur_Time=0;
+	Timer::TimerInt cur_Time1=0;
+	Timer::TimerInt cur_Time2=0;
 	Timer::TimerInt pastTime=0;
 	uint16_t distance;
 	int8_t value;
@@ -124,10 +126,12 @@ int main(void)
 
 		//JUST PRINT RAW:
 		cur_Time = System::Time();
-		if((int16_t)(cur_Time%10) > 0){
+
+		if((int16_t)(cur_Time - cur_Time1) > 10){
+			cur_Time1 = cur_Time;
 			trytryhaha.get_raw_image();
 			trytryhaha.imageCorrection(trytryhaha.data);
-//			trytryhaha.printRawCamGraph(0,0);
+			trytryhaha.printRawCamGraph(0,0);
 
 			value = trytryhaha.CheckLightIndex(trytryhaha.data);
 			state = trytryhaha.get_RState();
@@ -150,19 +154,25 @@ int main(void)
 		//System::DelayMs(10);
 		}
 
-		if((int16_t)(cur_Time%30)>0){
+		if((int16_t)(cur_Time-cur_Time2) > 30){
+			cur_Time2 = cur_Time;
 			trytryhaha.update_encoder();
+			trytryhaha.motor_control(trytryhaha.motorPID(trytryhaha.Ideal_encoder_count), 1);
 
 		if(!trytryhaha.get_encoder_count()){
 			encoderZeroCount++;
 		}else encoderZeroCount = 0;
 
-		if (encoderZeroCount > 2){
-			trytryhaha.motor_control(150,false);
+		if (encoderZeroCount > 1){
+			trytryhaha.motor_control(180,false);
 			if(trytryhaha.ideal_servo_degree >820) trytryhaha.servo_control(820-150);
 			else trytryhaha.servo_control(820+150);
 
-		System::DelayMs(1000);
+		System::DelayMs(600);
+		trytryhaha.update_encoder();
+		trytryhaha.motor_control(trytryhaha.ideal_motor_speed,true);
+		trytryhaha.servo_control(trytryhaha.ideal_servo_degree);
+
 		}
 			//trytryhaha.encoder->Update();
 		}

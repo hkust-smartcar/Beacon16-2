@@ -7,10 +7,11 @@
 #include "car.h"
 #include "RunMode.h"
 #define SERVO_MID 820
+#define REVERSE_SPEED 180
 
 
 RunMode::RunMode():
-servoErr(0), servoPrevErr(0), ideal_motor_speed(80), maxMotorSpeed(350), minMotorSpeed(80), ideal_servo_degree(SERVO_MID), encoder_count(0), motorErr(0), motorPrevErr(0), maxServoAngle(990), minServoAngle(580){
+servoErr(0), servoPrevErr(0), ideal_motor_speed(80), maxMotorSpeed(350), minMotorSpeed(80), ideal_servo_degree(SERVO_MID), encoder_count(0), motorErr(0), motorPrevErr(0), maxServoAngle(990), minServoAngle(580),encoderZeroCount(0){
 	//can initialize the variable here,
 }
 
@@ -51,46 +52,65 @@ int16_t RunMode::turningPID (int16_t mid_line, int16_t value){
 }
 
 int16_t RunMode::motorPID (int16_t ideal_encoder_count){
+	Ideal_encoder_count = ideal_encoder_count;
+
+	//!!! I just set the encoder count to 1000 here
+	Ideal_encoder_count = 1000;
 
 	m_Kp = 0.45f;
 	m_Ki = 0.05f;
-/*
- * 1905
- * 1385
- * 2510vgtygg
- * 2250
- */
-	encoder_count = get_encoder_count();
-	if(!encoder_count){
-		//Reverse turn at speed 120
-		ideal_motor_speed=120;
-		is_clockwise = 0;
-		ideal_servo_degree = (ideal_servo_degree > SERVO_MID) ? (SERVO_MID - (ideal_servo_degree-SERVO_MID)) : (SERVO_MID + (ideal_servo_degree - SERVO_MID));
-		servo_control(ideal_servo_degree);
-		motor_control(ideal_motor_speed,is_clockwise);
-		return 0;
-	}
-	if(abs(encoder_count)>5500){
-			return 0;
-		}
-	if(abs(encoder_count)>2500){
-		encoder_count = ideal_encoder_count;
-	}
+	m_kd = 0;
 
-	motorErr = (int16_t)(ideal_encoder_count - encoder_count);
+	encoder_count = get_encoder_count();
+
+//	if(!encoder_count){
+//		encoderZeroCount+=1;
+//	}else
+//		encoderZeroCount=0;
+
+	//CHECK IF MOTOR STOPPED
+//	(!encoder_count) ? encoderZeroCount+=1 : encoderZeroCount=0;
+//
+//	if(encoderZeroCount>1){
+//
+//		// REVERSE CAR AND EXIT MOTORPID TO AVOID MOTORERR MISS COUNT
+//		is_clockwise = false;
+//		motor_control(REVERSE_SPEED, is_clockwise);
+//		servo_control((ideal_servo_degree > 820) ? (SERVO_MID-150) : (SERVO_MID+150));
+//		//(ideal_servo_degree > 820) ? servo_control(SERVO_MID-150) : servo_control(SERVO_MID+150);
+//		motor_control(REVERSE_SPEED, is_clockwise);
+//		return REVERSE_SPEED;
+//
+//	}
+
+	//IF MOTOR GONE CRAZY RUN MOTOR BACK AT SPEED 80
+	if(abs(encoder_count)>5500){
+			return 80;
+		}
+
+//	if(abs(encoder_count)>2500){
+//		encoder_count = ideal_encoder_count;
+//	}
+	is_clockwise=true;
+	motorPrevErr = motorErr;
+	motorErr = (ideal_encoder_count - encoder_count);
+	motorSum += motorErr;
 	//relationship between motorerr & servoerr?
 	//(m_varset.ideal_encoder_count- (m_varset.ideal_encoder_count == 0 ? 0 : m_varset.KDec * abs(ServoErr))) - encodercount);
 	//17.308 * motor - 345.504
-	temp = ((float)ideal_encoder_count + 345.504)/17.308;
-	ideal_motor_speed = (int16_t) temp;
-	ideal_motor_speed = ideal_motor_speed + m_Kp * (motorErr - motorPrevErr) + m_Ki * (motorErr);
+	actual_encoder_target = ideal_encoder_count +m_Kp *motorErr+m_Ki*motorSum + m_kd*(motorErr-motorPrevErr);
+	temp = (actual_encoder_target + 345.504)/17.308;
+	ideal_motor_speed = (uint16_t) temp;
+//	ideal_motor_speed = ideal_motor_speed + m_Kp * (motorErr - motorPrevErr) + m_Ki * (motorErr);
 
-	motorPrevErr = motorErr;
+	motor_control(ideal_motor_speed, is_clockwise);
 
-	return ideal_motor_speed;//your implementation
+	return ideal_motor_speed;
 	// tips, remember to add something to protect your motor, for example:
 	// e.g. 1) add a simple if-statement, if encoder count is near zero for 1~2s, stop the motor
 	// e.g. 2) if the car are sure its crazy, stop motor
+
+
 }
 
 void RunMode::motor_control(uint16_t power, bool is_clockwise_rotating){
