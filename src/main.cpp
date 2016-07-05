@@ -150,6 +150,7 @@ int main(void)
 //			trytryhaha.printCar(message, 116);
 //			sprintf(message, "Speed %d", trytryhaha.ideal_motor_speed);
 //			trytryhaha.printvalue(0, 84, 128,40, message);
+			//hahaha
 
 		//System::DelayMs(10);
 		}
