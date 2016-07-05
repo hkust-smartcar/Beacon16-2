@@ -626,331 +626,331 @@ Discarded input sections
  .text          0x0000000000000000        0x0 obj/car-d-2016-camera.o
  .data          0x0000000000000000        0x0 obj/car-d-2016-camera.o
  .bss           0x0000000000000000        0x0 obj/car-d-2016-camera.o
- .gnu.lto_.inline.f5621b4a2c14fde4
+ .gnu.lto_.inline.109c8baa6673b28c
                 0x0000000000000000      0x500 obj/car-d-2016-camera.o
- .gnu.lto__ZN9__gnu_cxxL25__exchange_and_add_singleEPii.f5621b4a2c14fde4
+ .gnu.lto__ZN9__gnu_cxxL25__exchange_and_add_singleEPii.109c8baa6673b28c
                 0x0000000000000000      0x1b8 obj/car-d-2016-camera.o
- .gnu.lto__ZN9__gnu_cxxL27__exchange_and_add_dispatchEPii.f5621b4a2c14fde4
+ .gnu.lto__ZN9__gnu_cxxL27__exchange_and_add_dispatchEPii.109c8baa6673b28c
                 0x0000000000000000      0x140 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car10turningPIDEss.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car10turningPIDEss.109c8baa6673b28c
                 0x0000000000000000       0xb0 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car8motorPIDEs.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car8motorPIDEs.109c8baa6673b28c
                 0x0000000000000000       0xb0 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car13motor_controlEtb.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car13motor_controlEtb.109c8baa6673b28c
                 0x0000000000000000       0x6c obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car13servo_controlEs.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car13servo_controlEs.109c8baa6673b28c
                 0x0000000000000000       0x6b obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car17get_encoder_countEv.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car17get_encoder_countEv.109c8baa6673b28c
                 0x0000000000000000       0xb1 obj/car-d-2016-camera.o
- .gnu.lto__ZNKSs7_M_dataEv.f5621b4a2c14fde4
+ .gnu.lto__ZNKSs7_M_dataEv.109c8baa6673b28c
                 0x0000000000000000      0x142 obj/car-d-2016-camera.o
- .gnu.lto__ZNKSs5c_strEv.f5621b4a2c14fde4
+ .gnu.lto__ZNKSs5c_strEv.109c8baa6673b28c
                 0x0000000000000000      0x134 obj/car-d-2016-camera.o
- .gnu.lto__ZNKSs6_M_repEv.f5621b4a2c14fde4
+ .gnu.lto__ZNKSs6_M_repEv.109c8baa6673b28c
                 0x0000000000000000      0x164 obj/car-d-2016-camera.o
- .gnu.lto__ZNSs4_Rep10_M_refdataEv.f5621b4a2c14fde4
+ .gnu.lto__ZNSs4_Rep10_M_refdataEv.109c8baa6673b28c
                 0x0000000000000000      0x12e obj/car-d-2016-camera.o
- .gnu.lto__ZNSs4_Rep12_S_empty_repEv.f5621b4a2c14fde4
+ .gnu.lto__ZNSs4_Rep12_S_empty_repEv.109c8baa6673b28c
                 0x0000000000000000      0x16d obj/car-d-2016-camera.o
- .gnu.lto__ZNSs12_S_empty_repEv.f5621b4a2c14fde4
+ .gnu.lto__ZNSs12_S_empty_repEv.109c8baa6673b28c
                 0x0000000000000000      0x130 obj/car-d-2016-camera.o
- .gnu.lto__ZNKSt15basic_streambufIcSt11char_traitsIcEE4pptrEv.f5621b4a2c14fde4
+ .gnu.lto__ZNKSt15basic_streambufIcSt11char_traitsIcEE4pptrEv.109c8baa6673b28c
                 0x0000000000000000      0x138 obj/car-d-2016-camera.o
- .gnu.lto__ZNKSt15basic_streambufIcSt11char_traitsIcEE5egptrEv.f5621b4a2c14fde4
+ .gnu.lto__ZNKSt15basic_streambufIcSt11char_traitsIcEE5egptrEv.109c8baa6673b28c
                 0x0000000000000000      0x138 obj/car-d-2016-camera.o
- .gnu.lto__ZNKSt15basic_streambufIcSt11char_traitsIcEE5pbaseEv.f5621b4a2c14fde4
+ .gnu.lto__ZNKSt15basic_streambufIcSt11char_traitsIcEE5pbaseEv.109c8baa6673b28c
                 0x0000000000000000      0x138 obj/car-d-2016-camera.o
- .gnu.lto__ZNSs4_Rep15_M_set_sharableEv.f5621b4a2c14fde4
+ .gnu.lto__ZNSs4_Rep15_M_set_sharableEv.109c8baa6673b28c
                 0x0000000000000000      0x111 obj/car-d-2016-camera.o
- .gnu.lto__ZNSoC2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZNSoC2Ev.109c8baa6673b28c
                 0x0000000000000000      0x2d0 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt9basic_iosIcSt11char_traitsIcEEC2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZNSt9basic_iosIcSt11char_traitsIcEEC2Ev.109c8baa6673b28c
                 0x0000000000000000      0x20b obj/car-d-2016-camera.o
- .gnu.lto__ZNSt9basic_iosIcSt11char_traitsIcEED2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZNSt9basic_iosIcSt11char_traitsIcEED2Ev.109c8baa6673b28c
                 0x0000000000000000      0x1ea obj/car-d-2016-camera.o
- .gnu.lto__ZNSt9basic_iosIcSt11char_traitsIcEED0Ev.f5621b4a2c14fde4
+ .gnu.lto__ZNSt9basic_iosIcSt11char_traitsIcEED0Ev.109c8baa6673b28c
                 0x0000000000000000      0x14d obj/car-d-2016-camera.o
- .gnu.lto__ZNSoD2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZNSoD2Ev.109c8baa6673b28c
                 0x0000000000000000      0x2d1 obj/car-d-2016-camera.o
- .gnu.lto__ZNSoD1Ev.f5621b4a2c14fde4
+ .gnu.lto__ZNSoD1Ev.109c8baa6673b28c
                 0x0000000000000000      0x29a obj/car-d-2016-camera.o
- .gnu.lto__ZNSoD0Ev.f5621b4a2c14fde4
+ .gnu.lto__ZNSoD0Ev.109c8baa6673b28c
                 0x0000000000000000      0x145 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt15basic_streambufIcSt11char_traitsIcEED2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZNSt15basic_streambufIcSt11char_traitsIcEED2Ev.109c8baa6673b28c
                 0x0000000000000000      0x1e5 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt15basic_streambufIcSt11char_traitsIcEED0Ev.f5621b4a2c14fde4
+ .gnu.lto__ZNSt15basic_streambufIcSt11char_traitsIcEED0Ev.109c8baa6673b28c
                 0x0000000000000000      0x148 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt15basic_streambufIcSt11char_traitsIcEEC2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZNSt15basic_streambufIcSt11char_traitsIcEEC2Ev.109c8baa6673b28c
                 0x0000000000000000      0x1e6 obj/car-d-2016-camera.o
- .gnu.lto__ZNSsaSERKSs.f5621b4a2c14fde4
+ .gnu.lto__ZNSsaSERKSs.109c8baa6673b28c
                 0x0000000000000000      0x13b obj/car-d-2016-camera.o
- .gnu.lto__ZNSsaSEOSs.f5621b4a2c14fde4
+ .gnu.lto__ZNSsaSEOSs.109c8baa6673b28c
                 0x0000000000000000      0x14e obj/car-d-2016-camera.o
- .gnu.lto__ZNSs4_Rep10_M_disposeERKSaIcE.f5621b4a2c14fde4
+ .gnu.lto__ZNSs4_Rep10_M_disposeERKSaIcE.109c8baa6673b28c
                 0x0000000000000000      0x27d obj/car-d-2016-camera.o
- .gnu.lto__ZNSt11char_traitsIcE6assignERcRKc.f5621b4a2c14fde4
+ .gnu.lto__ZNSt11char_traitsIcE6assignERcRKc.109c8baa6673b28c
                 0x0000000000000000      0x13c obj/car-d-2016-camera.o
- .gnu.lto__ZNSs4_Rep26_M_set_length_and_sharableEj.f5621b4a2c14fde4
+ .gnu.lto__ZNSs4_Rep26_M_set_length_and_sharableEj.109c8baa6673b28c
                 0x0000000000000000      0x26e obj/car-d-2016-camera.o
- .gnu.lto__ZNSt11char_traitsIcE4copyEPcPKcj.f5621b4a2c14fde4
+ .gnu.lto__ZNSt11char_traitsIcE4copyEPcPKcj.109c8baa6673b28c
                 0x0000000000000000      0x140 obj/car-d-2016-camera.o
- .gnu.lto__ZNSs7_M_copyEPcPKcj.f5621b4a2c14fde4
+ .gnu.lto__ZNSs7_M_copyEPcPKcj.109c8baa6673b28c
                 0x0000000000000000      0x14c obj/car-d-2016-camera.o
- .gnu.lto__ZNSs13_S_copy_charsEPcS_S_.f5621b4a2c14fde4
+ .gnu.lto__ZNSs13_S_copy_charsEPcS_S_.109c8baa6673b28c
                 0x0000000000000000      0x191 obj/car-d-2016-camera.o
- .gnu.lto__ZL20__gthread_key_deletei.f5621b4a2c14fde4
+ .gnu.lto__ZL20__gthread_key_deletei.109c8baa6673b28c
                 0x0000000000000000      0x138 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt14_Function_baseC2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZNSt14_Function_baseC2Ev.109c8baa6673b28c
                 0x0000000000000000      0x150 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt14_Function_baseD2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZNSt14_Function_baseD2Ev.109c8baa6673b28c
                 0x0000000000000000      0x1f6 obj/car-d-2016-camera.o
- .gnu.lto__ZNK5libsc3k606Ov772511IsAvailableEv.f5621b4a2c14fde4
+ .gnu.lto__ZNK5libsc3k606Ov772511IsAvailableEv.109c8baa6673b28c
                 0x0000000000000000       0xf6 obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc3Lcd4RectC2Ejjjj.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc3Lcd4RectC2Ejjjj.109c8baa6673b28c
                 0x0000000000000000      0x12a obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc7St7735r4GetWEv.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc7St7735r4GetWEv.109c8baa6673b28c
                 0x0000000000000000       0xdb obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc7St7735r4GetHEv.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc7St7735r4GetHEv.109c8baa6673b28c
                 0x0000000000000000       0xdb obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc5MotorD2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc5MotorD2Ev.109c8baa6673b28c
                 0x0000000000000000      0x119 obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc13LcdTypewriter12SetTextColorEt.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc13LcdTypewriter12SetTextColorEt.109c8baa6673b28c
                 0x0000000000000000       0xc7 obj/car-d-2016-camera.o
- .gnu.lto__ZNK5libsc5Us10011GetDistanceEv.f5621b4a2c14fde4
+ .gnu.lto__ZNK5libsc5Us10011GetDistanceEv.109c8baa6673b28c
                 0x0000000000000000       0xf0 obj/car-d-2016-camera.o
- .gnu.lto__ZStorSt13_Ios_OpenmodeS_.f5621b4a2c14fde4
+ .gnu.lto__ZStorSt13_Ios_OpenmodeS_.109c8baa6673b28c
                 0x0000000000000000      0x18b obj/car-d-2016-camera.o
- .gnu.lto__ZN7libbase3k603Mcg12GetMcgConfigEv.f5621b4a2c14fde4
+ .gnu.lto__ZN7libbase3k603Mcg12GetMcgConfigEv.109c8baa6673b28c
                 0x0000000000000000      0x10d obj/car-d-2016-camera.o
- .gnu.lto__Z13GetLed1Configv.f5621b4a2c14fde4
+ .gnu.lto__Z13GetLed1Configv.109c8baa6673b28c
                 0x0000000000000000      0x121 obj/car-d-2016-camera.o
- .gnu.lto__Z13GetLed2Configv.f5621b4a2c14fde4
+ .gnu.lto__Z13GetLed2Configv.109c8baa6673b28c
                 0x0000000000000000      0x120 obj/car-d-2016-camera.o
- .gnu.lto__Z13GetLed3Configv.f5621b4a2c14fde4
+ .gnu.lto__Z13GetLed3Configv.109c8baa6673b28c
                 0x0000000000000000      0x122 obj/car-d-2016-camera.o
- .gnu.lto__Z13GetLed4Configv.f5621b4a2c14fde4
+ .gnu.lto__Z13GetLed4Configv.109c8baa6673b28c
                 0x0000000000000000      0x125 obj/car-d-2016-camera.o
- .gnu.lto__Z18GetAbEncoderConfigv.f5621b4a2c14fde4
+ .gnu.lto__Z18GetAbEncoderConfigv.109c8baa6673b28c
                 0x0000000000000000      0x118 obj/car-d-2016-camera.o
- .gnu.lto__Z14GetServoConfigv.f5621b4a2c14fde4
+ .gnu.lto__Z14GetServoConfigv.109c8baa6673b28c
                 0x0000000000000000      0x114 obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc5Motor6ConfigC2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc5Motor6ConfigC2Ev.109c8baa6673b28c
                 0x0000000000000000      0x104 obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc8DirMotor6ConfigC2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc8DirMotor6ConfigC2Ev.109c8baa6673b28c
                 0x0000000000000000      0x13b obj/car-d-2016-camera.o
- .gnu.lto__Z17GetDirmotorConfigv.f5621b4a2c14fde4
+ .gnu.lto__Z17GetDirmotorConfigv.109c8baa6673b28c
                 0x0000000000000000      0x136 obj/car-d-2016-camera.o
- .gnu.lto__Z14GetUs100Configv.f5621b4a2c14fde4
+ .gnu.lto__Z14GetUs100Configv.109c8baa6673b28c
                 0x0000000000000000      0x114 obj/car-d-2016-camera.o
- .gnu.lto__Z12GetCcdConfigv.f5621b4a2c14fde4
+ .gnu.lto__Z12GetCcdConfigv.109c8baa6673b28c
                 0x0000000000000000       0xb7 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt8functionIFvhEED2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZNSt8functionIFvhEED2Ev.109c8baa6673b28c
                 0x0000000000000000      0x17e obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc6Button6ConfigD2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc6Button6ConfigD2Ev.109c8baa6673b28c
                 0x0000000000000000      0x138 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt8functionIFvhN5libsc8Joystick5StateEEED2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZNSt8functionIFvhN5libsc8Joystick5StateEEED2Ev.109c8baa6673b28c
                 0x0000000000000000      0x17e obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc8Joystick6ConfigD2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc8Joystick6ConfigD2Ev.109c8baa6673b28c
                 0x0000000000000000      0x1e4 obj/car-d-2016-camera.o
- .gnu.lto__Z12GetLcdConfigv.f5621b4a2c14fde4
+ .gnu.lto__Z12GetLcdConfigv.109c8baa6673b28c
                 0x0000000000000000      0x136 obj/car-d-2016-camera.o
- .gnu.lto__Z15GetBuzzerConfigv.f5621b4a2c14fde4
+ .gnu.lto__Z15GetBuzzerConfigv.109c8baa6673b28c
                 0x0000000000000000      0x126 obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc3k606Ov77256ConfigC2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc3k606Ov77256ConfigC2Ev.109c8baa6673b28c
                 0x0000000000000000      0x118 obj/car-d-2016-camera.o
- .gnu.lto__Z12GetCamConfigv.f5621b4a2c14fde4
+ .gnu.lto__Z12GetCamConfigv.109c8baa6673b28c
                 0x0000000000000000      0x148 obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc10LcdConsole6ConfigC2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc10LcdConsole6ConfigC2Ev.109c8baa6673b28c
                 0x0000000000000000      0x193 obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc3LedD2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc3LedD2Ev.109c8baa6673b28c
                 0x0000000000000000      0x136 obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc6ButtonD2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc6ButtonD2Ev.109c8baa6673b28c
                 0x0000000000000000      0x13a obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc8JoystickD2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc8JoystickD2Ev.109c8baa6673b28c
                 0x0000000000000000      0x1c5 obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc12SimpleBuzzerD2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc12SimpleBuzzerD2Ev.109c8baa6673b28c
                 0x0000000000000000      0x141 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car10printvalueESs.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car10printvalueESs.109c8baa6673b28c
                 0x0000000000000000      0x222 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car8printCarESsh.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car8printCarESsh.109c8baa6673b28c
                 0x0000000000000000      0x234 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car10printvalueEiiiiSs.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car10printvalueEiiiiSs.109c8baa6673b28c
                 0x0000000000000000      0x27d obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car10get2dimageEaaPA60_Kb.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car10get2dimageEaaPA60_Kb.109c8baa6673b28c
                 0x0000000000000000      0x449 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car8startcamEv.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car8startcamEv.109c8baa6673b28c
                 0x0000000000000000       0xe1 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car7stopcamEv.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car7stopcamEv.109c8baa6673b28c
                 0x0000000000000000       0xe1 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car16printRawCamGraphEjj.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car16printRawCamGraphEjj.109c8baa6673b28c
                 0x0000000000000000      0x249 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car9printlineEst.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car9printlineEst.109c8baa6673b28c
                 0x0000000000000000      0x26e obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car8GetPixelEPKhaa.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car8GetPixelEPKhaa.109c8baa6673b28c
                 0x0000000000000000      0x231 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car8avgimageEPKhPA58_b.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car8avgimageEPKhPA58_b.109c8baa6673b28c
                 0x0000000000000000      0x68f obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car13printavgimageEPKhPA78_b.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car13printavgimageEPKhPA78_b.109c8baa6673b28c
                 0x0000000000000000      0x9af obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car15CheckLightIndexEPKh.f5621b4a2c14fde4
-                0x0000000000000000      0x979 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car15imageCorrectionEPKh.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car15CheckLightIndexEPKh.109c8baa6673b28c
+                0x0000000000000000      0x97b obj/car-d-2016-camera.o
+ .gnu.lto__ZN3Car15imageCorrectionEPKh.109c8baa6673b28c
                 0x0000000000000000      0x21f obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car10u_distanceEv.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car10u_distanceEv.109c8baa6673b28c
                 0x0000000000000000      0x172 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car10get_RStateEv.f5621b4a2c14fde4
-                0x0000000000000000      0x2ae obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car9exitStateEa.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car10get_RStateEv.109c8baa6673b28c
+                0x0000000000000000      0x2ac obj/car-d-2016-camera.o
+ .gnu.lto__ZN3Car9exitStateEa.109c8baa6673b28c
                 0x0000000000000000       0x72 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car9RUN_STATEEa.f5621b4a2c14fde4
-                0x0000000000000000      0x47e obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car5avoidEa.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car9RUN_STATEEa.109c8baa6673b28c
+                0x0000000000000000      0x47f obj/car-d-2016-camera.o
+ .gnu.lto__ZN3Car5avoidEa.109c8baa6673b28c
                 0x0000000000000000      0x11a obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car8clearLcdEt.f5621b4a2c14fde4
-                0x0000000000000000      0x167 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car8blinkLEDEaii.f5621b4a2c14fde4
-                0x0000000000000000      0x2a6 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car10beepbuzzerEb.f5621b4a2c14fde4
-                0x0000000000000000       0xea obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car9switchLEDEa.f5621b4a2c14fde4
-                0x0000000000000000      0x1ee obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car9getbuttonEa.f5621b4a2c14fde4
-                0x0000000000000000      0x195 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car11getjoystickEv.f5621b4a2c14fde4
-                0x0000000000000000      0x106 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car13get_raw_imageEv.f5621b4a2c14fde4
-                0x0000000000000000      0x1c5 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car13rawimgprocessEv.f5621b4a2c14fde4
-                0x0000000000000000      0x30e obj/car-d-2016-camera.o
- .gnu.lto__ZNSt14unary_functionIhvEC2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x124 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt31_Maybe_unary_or_binary_functionIvIhEEC2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x143 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt8functionIFvhEEC2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x1a0 obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc6Button6ConfigC2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x14e obj/car-d-2016-camera.o
- .gnu.lto__Z16GetButton1Configv.f5621b4a2c14fde4
-                0x0000000000000000      0x136 obj/car-d-2016-camera.o
- .gnu.lto__Z16GetButton2Configv.f5621b4a2c14fde4
-                0x0000000000000000      0x136 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt15binary_functionIhN5libsc8Joystick5StateEvEC2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x125 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt31_Maybe_unary_or_binary_functionIvIhN5libsc8Joystick5StateEEEC2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x142 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt8functionIFvhN5libsc8Joystick5StateEEEC2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x1a0 obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc8Joystick6ConfigC2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x207 obj/car-d-2016-camera.o
- .gnu.lto__Z17GetJoystickConfigv.f5621b4a2c14fde4
-                0x0000000000000000      0x12d obj/car-d-2016-camera.o
- .gnu.lto__ZN3CarC2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x851 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt10_Head_baseILj0EPN5libsc10LcdConsole8CellDataELb0EE7_M_headERS4_.f5621b4a2c14fde4
-                0x0000000000000000      0x138 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt11_Tuple_implILj0EIPN5libsc10LcdConsole8CellDataESt14default_deleteIA_S2_EEE7_M_headERS7_.f5621b4a2c14fde4
-                0x0000000000000000      0x168 obj/car-d-2016-camera.o
- .gnu.lto__ZSt12__get_helperILj0EPN5libsc10LcdConsole8CellDataEISt14default_deleteIA_S2_EEENSt9__add_refIT0_E4typeERSt11_Tuple_implIXT_EIS8_DpT1_EE.f5621b4a2c14fde4
-                0x0000000000000000      0x12d obj/car-d-2016-camera.o
- .gnu.lto__ZSt3getILj0EIPN5libsc10LcdConsole8CellDataESt14default_deleteIA_S2_EEENSt9__add_refINSt13tuple_elementIXT_ESt5tupleIIDpT0_EEE4typeEE4typeERSC_.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car8clearLcdEt.109c8baa6673b28c
                 0x0000000000000000      0x166 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt10_Head_baseILj1ESt14default_deleteIA_N5libsc10LcdConsole8CellDataEELb1EE7_M_headERS6_.f5621b4a2c14fde4
-                0x0000000000000000      0x11c obj/car-d-2016-camera.o
- .gnu.lto__ZNSt11_Tuple_implILj1EISt14default_deleteIA_N5libsc10LcdConsole8CellDataEEEE7_M_headERS6_.f5621b4a2c14fde4
-                0x0000000000000000      0x12c obj/car-d-2016-camera.o
- .gnu.lto__ZSt12__get_helperILj1ESt14default_deleteIA_N5libsc10LcdConsole8CellDataEEIEENSt9__add_refIT0_E4typeERSt11_Tuple_implIXT_EIS7_DpT1_EE.f5621b4a2c14fde4
-                0x0000000000000000      0x12d obj/car-d-2016-camera.o
- .gnu.lto__ZSt3getILj1EIPN5libsc10LcdConsole8CellDataESt14default_deleteIA_S2_EEENSt9__add_refINSt13tuple_elementIXT_ESt5tupleIIDpT0_EEE4typeEE4typeERSC_.f5621b4a2c14fde4
-                0x0000000000000000      0x12d obj/car-d-2016-camera.o
- .gnu.lto__ZNSt10unique_ptrIA_N5libsc10LcdConsole8CellDataESt14default_deleteIS3_EE11get_deleterEv.f5621b4a2c14fde4
-                0x0000000000000000      0x170 obj/car-d-2016-camera.o
- .gnu.lto__ZNKSt14default_deleteIA_N5libsc10LcdConsole8CellDataEEclEPS2_.f5621b4a2c14fde4
-                0x0000000000000000      0x128 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt10unique_ptrIA_N5libsc10LcdConsole8CellDataESt14default_deleteIS3_EED2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x259 obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc10LcdConsoleD2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x13e obj/car-d-2016-camera.o
- .gnu.lto__ZN9__gnu_cxx13new_allocatorIcEC2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x128 obj/car-d-2016-camera.o
- .gnu.lto__ZNSaIcEC2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x149 obj/car-d-2016-camera.o
- .gnu.lto__ZN9__gnu_cxx13new_allocatorIcED2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x127 obj/car-d-2016-camera.o
- .gnu.lto__ZNSaIcED2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x146 obj/car-d-2016-camera.o
- .gnu.lto__ZNSs12_Alloc_hiderD2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x148 obj/car-d-2016-camera.o
- .gnu.lto__ZN9__gnu_cxx13new_allocatorIcEC2ERKS1_.f5621b4a2c14fde4
-                0x0000000000000000      0x128 obj/car-d-2016-camera.o
- .gnu.lto__ZNSaIcEC2ERKS_.f5621b4a2c14fde4
-                0x0000000000000000      0x153 obj/car-d-2016-camera.o
- .gnu.lto__ZNKSs13get_allocatorEv.f5621b4a2c14fde4
-                0x0000000000000000      0x161 obj/car-d-2016-camera.o
- .gnu.lto__ZNSsD2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x209 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEED2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x202 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEED0Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x145 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt19basic_ostringstreamIcSt11char_traitsIcESaIcEED1Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x302 obj/car-d-2016-camera.o
- .gnu.lto__ZNSt19basic_ostringstreamIcSt11char_traitsIcESaIcEED0Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x145 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car15findLightbyByteEPKha.f5621b4a2c14fde4
-                0x0000000000000000     0x1082 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car13DiverseSearchEPKhhh.f5621b4a2c14fde4
-                0x0000000000000000      0x6ec obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car4turnEa.f5621b4a2c14fde4
-                0x0000000000000000      0x374 obj/car-d-2016-camera.o
- .gnu.lto__ZNSs12_Alloc_hiderC2EPcRKSaIcE.f5621b4a2c14fde4
-                0x0000000000000000      0x173 obj/car-d-2016-camera.o
- .gnu.lto__ZNSsC2Ev.f5621b4a2c14fde4
-                0x0000000000000000      0x21b obj/car-d-2016-camera.o
- .gnu.lto__ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEEC2ESt13_Ios_Openmode.f5621b4a2c14fde4
-                0x0000000000000000      0x1ed obj/car-d-2016-camera.o
- .gnu.lto__ZNSt19basic_ostringstreamIcSt11char_traitsIcESaIcEEC1ESt13_Ios_Openmode.f5621b4a2c14fde4
-                0x0000000000000000      0x35a obj/car-d-2016-camera.o
- .gnu.lto__ZSteqIcEbRKSaIT_ES3_.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car8blinkLEDEaii.109c8baa6673b28c
+                0x0000000000000000      0x2a2 obj/car-d-2016-camera.o
+ .gnu.lto__ZN3Car10beepbuzzerEb.109c8baa6673b28c
+                0x0000000000000000       0xea obj/car-d-2016-camera.o
+ .gnu.lto__ZN3Car9switchLEDEa.109c8baa6673b28c
+                0x0000000000000000      0x1ef obj/car-d-2016-camera.o
+ .gnu.lto__ZN3Car9getbuttonEa.109c8baa6673b28c
+                0x0000000000000000      0x196 obj/car-d-2016-camera.o
+ .gnu.lto__ZN3Car11getjoystickEv.109c8baa6673b28c
+                0x0000000000000000      0x107 obj/car-d-2016-camera.o
+ .gnu.lto__ZN3Car13get_raw_imageEv.109c8baa6673b28c
+                0x0000000000000000      0x1c6 obj/car-d-2016-camera.o
+ .gnu.lto__ZN3Car13rawimgprocessEv.109c8baa6673b28c
+                0x0000000000000000      0x30c obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt14unary_functionIhvEC2Ev.109c8baa6673b28c
+                0x0000000000000000      0x124 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt31_Maybe_unary_or_binary_functionIvIhEEC2Ev.109c8baa6673b28c
+                0x0000000000000000      0x143 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt8functionIFvhEEC2Ev.109c8baa6673b28c
+                0x0000000000000000      0x1a0 obj/car-d-2016-camera.o
+ .gnu.lto__ZN5libsc6Button6ConfigC2Ev.109c8baa6673b28c
+                0x0000000000000000      0x14e obj/car-d-2016-camera.o
+ .gnu.lto__Z16GetButton1Configv.109c8baa6673b28c
+                0x0000000000000000      0x136 obj/car-d-2016-camera.o
+ .gnu.lto__Z16GetButton2Configv.109c8baa6673b28c
+                0x0000000000000000      0x136 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt15binary_functionIhN5libsc8Joystick5StateEvEC2Ev.109c8baa6673b28c
                 0x0000000000000000      0x125 obj/car-d-2016-camera.o
- .gnu.lto__ZN9__gnu_cxx17__is_null_pointerIcEEbPT_.f5621b4a2c14fde4
+ .gnu.lto__ZNSt31_Maybe_unary_or_binary_functionIvIhN5libsc8Joystick5StateEEEC2Ev.109c8baa6673b28c
+                0x0000000000000000      0x142 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt8functionIFvhN5libsc8Joystick5StateEEEC2Ev.109c8baa6673b28c
+                0x0000000000000000      0x1a0 obj/car-d-2016-camera.o
+ .gnu.lto__ZN5libsc8Joystick6ConfigC2Ev.109c8baa6673b28c
+                0x0000000000000000      0x207 obj/car-d-2016-camera.o
+ .gnu.lto__Z17GetJoystickConfigv.109c8baa6673b28c
+                0x0000000000000000      0x12d obj/car-d-2016-camera.o
+ .gnu.lto__ZN3CarC2Ev.109c8baa6673b28c
+                0x0000000000000000      0x851 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt10_Head_baseILj0EPN5libsc10LcdConsole8CellDataELb0EE7_M_headERS4_.109c8baa6673b28c
+                0x0000000000000000      0x138 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt11_Tuple_implILj0EIPN5libsc10LcdConsole8CellDataESt14default_deleteIA_S2_EEE7_M_headERS7_.109c8baa6673b28c
+                0x0000000000000000      0x168 obj/car-d-2016-camera.o
+ .gnu.lto__ZSt12__get_helperILj0EPN5libsc10LcdConsole8CellDataEISt14default_deleteIA_S2_EEENSt9__add_refIT0_E4typeERSt11_Tuple_implIXT_EIS8_DpT1_EE.109c8baa6673b28c
+                0x0000000000000000      0x12d obj/car-d-2016-camera.o
+ .gnu.lto__ZSt3getILj0EIPN5libsc10LcdConsole8CellDataESt14default_deleteIA_S2_EEENSt9__add_refINSt13tuple_elementIXT_ESt5tupleIIDpT0_EEE4typeEE4typeERSC_.109c8baa6673b28c
+                0x0000000000000000      0x166 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt10_Head_baseILj1ESt14default_deleteIA_N5libsc10LcdConsole8CellDataEELb1EE7_M_headERS6_.109c8baa6673b28c
+                0x0000000000000000      0x11c obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt11_Tuple_implILj1EISt14default_deleteIA_N5libsc10LcdConsole8CellDataEEEE7_M_headERS6_.109c8baa6673b28c
+                0x0000000000000000      0x12c obj/car-d-2016-camera.o
+ .gnu.lto__ZSt12__get_helperILj1ESt14default_deleteIA_N5libsc10LcdConsole8CellDataEEIEENSt9__add_refIT0_E4typeERSt11_Tuple_implIXT_EIS7_DpT1_EE.109c8baa6673b28c
+                0x0000000000000000      0x12d obj/car-d-2016-camera.o
+ .gnu.lto__ZSt3getILj1EIPN5libsc10LcdConsole8CellDataESt14default_deleteIA_S2_EEENSt9__add_refINSt13tuple_elementIXT_ESt5tupleIIDpT0_EEE4typeEE4typeERSC_.109c8baa6673b28c
+                0x0000000000000000      0x12d obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt10unique_ptrIA_N5libsc10LcdConsole8CellDataESt14default_deleteIS3_EE11get_deleterEv.109c8baa6673b28c
+                0x0000000000000000      0x170 obj/car-d-2016-camera.o
+ .gnu.lto__ZNKSt14default_deleteIA_N5libsc10LcdConsole8CellDataEEclEPS2_.109c8baa6673b28c
+                0x0000000000000000      0x128 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt10unique_ptrIA_N5libsc10LcdConsole8CellDataESt14default_deleteIS3_EED2Ev.109c8baa6673b28c
+                0x0000000000000000      0x259 obj/car-d-2016-camera.o
+ .gnu.lto__ZN5libsc10LcdConsoleD2Ev.109c8baa6673b28c
+                0x0000000000000000      0x13e obj/car-d-2016-camera.o
+ .gnu.lto__ZN9__gnu_cxx13new_allocatorIcEC2Ev.109c8baa6673b28c
+                0x0000000000000000      0x128 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSaIcEC2Ev.109c8baa6673b28c
+                0x0000000000000000      0x149 obj/car-d-2016-camera.o
+ .gnu.lto__ZN9__gnu_cxx13new_allocatorIcED2Ev.109c8baa6673b28c
+                0x0000000000000000      0x127 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSaIcED2Ev.109c8baa6673b28c
+                0x0000000000000000      0x146 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSs12_Alloc_hiderD2Ev.109c8baa6673b28c
+                0x0000000000000000      0x148 obj/car-d-2016-camera.o
+ .gnu.lto__ZN9__gnu_cxx13new_allocatorIcEC2ERKS1_.109c8baa6673b28c
+                0x0000000000000000      0x128 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSaIcEC2ERKS_.109c8baa6673b28c
+                0x0000000000000000      0x153 obj/car-d-2016-camera.o
+ .gnu.lto__ZNKSs13get_allocatorEv.109c8baa6673b28c
+                0x0000000000000000      0x161 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSsD2Ev.109c8baa6673b28c
+                0x0000000000000000      0x209 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEED2Ev.109c8baa6673b28c
+                0x0000000000000000      0x202 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEED0Ev.109c8baa6673b28c
+                0x0000000000000000      0x145 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt19basic_ostringstreamIcSt11char_traitsIcESaIcEED1Ev.109c8baa6673b28c
+                0x0000000000000000      0x302 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt19basic_ostringstreamIcSt11char_traitsIcESaIcEED0Ev.109c8baa6673b28c
+                0x0000000000000000      0x145 obj/car-d-2016-camera.o
+ .gnu.lto__ZN3Car15findLightbyByteEPKha.109c8baa6673b28c
+                0x0000000000000000     0x1082 obj/car-d-2016-camera.o
+ .gnu.lto__ZN3Car13DiverseSearchEPKhhh.109c8baa6673b28c
+                0x0000000000000000      0x6ee obj/car-d-2016-camera.o
+ .gnu.lto__ZN3Car4turnEa.109c8baa6673b28c
+                0x0000000000000000      0x372 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSs12_Alloc_hiderC2EPcRKSaIcE.109c8baa6673b28c
+                0x0000000000000000      0x173 obj/car-d-2016-camera.o
+ .gnu.lto__ZNSsC2Ev.109c8baa6673b28c
+                0x0000000000000000      0x21b obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEEC2ESt13_Ios_Openmode.109c8baa6673b28c
+                0x0000000000000000      0x1ed obj/car-d-2016-camera.o
+ .gnu.lto__ZNSt19basic_ostringstreamIcSt11char_traitsIcESaIcEEC1ESt13_Ios_Openmode.109c8baa6673b28c
+                0x0000000000000000      0x35a obj/car-d-2016-camera.o
+ .gnu.lto__ZSteqIcEbRKSaIT_ES3_.109c8baa6673b28c
+                0x0000000000000000      0x125 obj/car-d-2016-camera.o
+ .gnu.lto__ZN9__gnu_cxx17__is_null_pointerIcEEbPT_.109c8baa6673b28c
                 0x0000000000000000      0x12a obj/car-d-2016-camera.o
- .gnu.lto__ZSt19__iterator_categoryIPcENSt15iterator_traitsIT_E17iterator_categoryERKS2_.f5621b4a2c14fde4
+ .gnu.lto__ZSt19__iterator_categoryIPcENSt15iterator_traitsIT_E17iterator_categoryERKS2_.109c8baa6673b28c
                 0x0000000000000000      0x123 obj/car-d-2016-camera.o
- .gnu.lto__ZSt10__distanceIPcENSt15iterator_traitsIT_E15difference_typeES2_S2_St26random_access_iterator_tag.f5621b4a2c14fde4
+ .gnu.lto__ZSt10__distanceIPcENSt15iterator_traitsIT_E15difference_typeES2_S2_St26random_access_iterator_tag.109c8baa6673b28c
                 0x0000000000000000      0x17d obj/car-d-2016-camera.o
- .gnu.lto__ZSt8distanceIPcENSt15iterator_traitsIT_E15difference_typeES2_S2_.f5621b4a2c14fde4
+ .gnu.lto__ZSt8distanceIPcENSt15iterator_traitsIT_E15difference_typeES2_S2_.109c8baa6673b28c
                 0x0000000000000000      0x1c8 obj/car-d-2016-camera.o
- .gnu.lto__ZNSs12_S_constructIPcEES0_T_S1_RKSaIcESt20forward_iterator_tag.f5621b4a2c14fde4
+ .gnu.lto__ZNSs12_S_constructIPcEES0_T_S1_RKSaIcESt20forward_iterator_tag.109c8baa6673b28c
                 0x0000000000000000      0x4b0 obj/car-d-2016-camera.o
- .gnu.lto__ZNSs16_S_construct_auxIPcEES0_T_S1_RKSaIcESt12__false_type.f5621b4a2c14fde4
+ .gnu.lto__ZNSs16_S_construct_auxIPcEES0_T_S1_RKSaIcESt12__false_type.109c8baa6673b28c
                 0x0000000000000000      0x1a6 obj/car-d-2016-camera.o
- .gnu.lto__ZNSs12_S_constructIPcEES0_T_S1_RKSaIcE.f5621b4a2c14fde4
+ .gnu.lto__ZNSs12_S_constructIPcEES0_T_S1_RKSaIcE.109c8baa6673b28c
                 0x0000000000000000      0x186 obj/car-d-2016-camera.o
- .gnu.lto__ZNSsC2IPcEET_S1_RKSaIcE.f5621b4a2c14fde4
+ .gnu.lto__ZNSsC2IPcEET_S1_RKSaIcE.109c8baa6673b28c
                 0x0000000000000000      0x1c7 obj/car-d-2016-camera.o
- .gnu.lto__ZNKSt15basic_stringbufIcSt11char_traitsIcESaIcEE3strEv.f5621b4a2c14fde4
+ .gnu.lto__ZNKSt15basic_stringbufIcSt11char_traitsIcESaIcEE3strEv.109c8baa6673b28c
                 0x0000000000000000      0x3e3 obj/car-d-2016-camera.o
- .gnu.lto__ZNKSt19basic_ostringstreamIcSt11char_traitsIcESaIcEE3strEv.f5621b4a2c14fde4
+ .gnu.lto__ZNKSt19basic_ostringstreamIcSt11char_traitsIcESaIcEE3strEv.109c8baa6673b28c
                 0x0000000000000000      0x160 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car10printvalueEss.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car10printvalueEss.109c8baa6673b28c
                 0x0000000000000000      0x373 obj/car-d-2016-camera.o
- .gnu.lto__ZN3Car10printvalueEiiiiss.f5621b4a2c14fde4
+ .gnu.lto__ZN3Car10printvalueEiiiiss.109c8baa6673b28c
                 0x0000000000000000      0x3db obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc5ServoD2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc5ServoD2Ev.109c8baa6673b28c
                 0x0000000000000000      0x137 obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc6TrsD05D2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc6TrsD05D2Ev.109c8baa6673b28c
                 0x0000000000000000      0x13b obj/car-d-2016-camera.o
- .gnu.lto__ZN5libsc8DirMotorD2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZN5libsc8DirMotorD2Ev.109c8baa6673b28c
                 0x0000000000000000      0x19f obj/car-d-2016-camera.o
- .gnu.lto__ZN3CarD2Ev.f5621b4a2c14fde4
+ .gnu.lto__ZN3CarD2Ev.109c8baa6673b28c
                 0x0000000000000000      0x5cc obj/car-d-2016-camera.o
- .gnu.lto_.symbol_nodes.f5621b4a2c14fde4
+ .gnu.lto_.symbol_nodes.109c8baa6673b28c
                 0x0000000000000000      0xe07 obj/car-d-2016-camera.o
- .gnu.lto_.refs.f5621b4a2c14fde4
+ .gnu.lto_.refs.109c8baa6673b28c
                 0x0000000000000000      0x1a4 obj/car-d-2016-camera.o
- .gnu.lto_.decls.f5621b4a2c14fde4
-                0x0000000000000000    0x128f4 obj/car-d-2016-camera.o
- .gnu.lto_.symtab.f5621b4a2c14fde4
+ .gnu.lto_.decls.109c8baa6673b28c
+                0x0000000000000000    0x128f6 obj/car-d-2016-camera.o
+ .gnu.lto_.symtab.109c8baa6673b28c
                 0x0000000000000000     0x47b0 obj/car-d-2016-camera.o
  .gnu.lto_.opts
                 0x0000000000000000       0xd7 obj/car-d-2016-camera.o
@@ -25407,61 +25407,61 @@ OUTPUT(bin/inno14-d-2016-camera.elf elf32-littlearm)
  .debug_macro   0x0000000000023e1f      0x6be /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(uart-d-2016-camera.o)
  .debug_macro   0x00000000000244dd      0x513 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(soft_i2c_master-d-2016-camera.o)
 
-.debug_line     0x0000000000000000    0x35b19
- .debug_line    0x0000000000000000     0x1dd4 obj/car-d-2016-camera.o
- .debug_line    0x0000000000001dd4     0x142d obj/main-d-2016-camera.o
- .debug_line    0x0000000000003201     0x1fbc obj/pVarManager-d-2016-camera.o
- .debug_line    0x00000000000051bd     0x13e2 obj/RunMode-d-2016-camera.o
- .debug_line    0x000000000000659f      0x36a /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(assert-d-2016-camera.o)
- .debug_line    0x0000000000006909      0x591 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(startup-d-2016-camera.o)
- .debug_line    0x0000000000006e9a      0x382 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(system-d-2016-camera.o)
- .debug_line    0x000000000000721c      0x623 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(fpu-d-2016-camera.o)
- .debug_line    0x000000000000783f     0x141b /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(ftm_pwm-d-2016-camera.o)
- .debug_line    0x0000000000008c5a     0x160b /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(gpio-d-2016-camera.o)
- .debug_line    0x000000000000a265      0xf77 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(mcg-d-2016-camera.o)
- .debug_line    0x000000000000b1dc     0x10de /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(pin-d-2016-camera.o)
- .debug_line    0x000000000000c2ba     0x139a /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(pin_isr_manager-d-2016-camera.o)
- .debug_line    0x000000000000d654      0xea6 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(sim-d-2016-camera.o)
- .debug_line    0x000000000000e4fa      0x47a /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(syscall-d-2016-camera.o)
- .debug_line    0x000000000000e974      0x564 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(vectors-d-2016-camera.o)
- .debug_line    0x000000000000eed8      0xe2d /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(watchdog-d-2016-camera.o)
- .debug_line    0x000000000000fd05      0xc36 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(ab_encoder-d-2016-camera.o)
- .debug_line    0x000000000001093b     0x108f /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(button-d-2016-camera.o)
- .debug_line    0x00000000000119ca      0xc8b /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(dir_motor-d-2016-camera.o)
- .debug_line    0x0000000000012655      0xdf3 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(encoder-d-2016-camera.o)
- .debug_line    0x0000000000013448     0x11b3 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(joystick-d-2016-camera.o)
- .debug_line    0x00000000000145fb      0xd98 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(jy_mcu_bt_106-d-2016-camera.o)
- .debug_line    0x0000000000015393     0x1f80 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(ov7725-d-2016-camera.o)
- .debug_line    0x0000000000017313      0xe8b /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(ov7725_configurator-d-2016-camera.o)
- .debug_line    0x000000000001819e      0xcd5 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(system-d-2016-camera.o)
- .debug_line    0x0000000000018e73     0x2aa8 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(uart_device-d-2016-camera.o)
- .debug_line    0x000000000001b91b     0x1131 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(lcd_console-d-2016-camera.o)
- .debug_line    0x000000000001ca4c     0x14d2 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(lcd_typewriter-d-2016-camera.o)
- .debug_line    0x000000000001df1e      0xbd7 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(led-d-2016-camera.o)
- .debug_line    0x000000000001eaf5      0xd33 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(motor-d-2016-camera.o)
- .debug_line    0x000000000001f828      0xdfd /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(servo-d-2016-camera.o)
- .debug_line    0x0000000000020625      0xbe4 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(simple_buzzer-d-2016-camera.o)
- .debug_line    0x0000000000021209     0x127f /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(st7735r-d-2016-camera.o)
- .debug_line    0x0000000000022488     0x12a6 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(sys_tick_timer-d-2016-camera.o)
- .debug_line    0x000000000002372e      0xbbe /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(trs_d05-d-2016-camera.o)
- .debug_line    0x00000000000242ec      0xcb6 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(us_100-d-2016-camera.o)
- .debug_line    0x0000000000024fa2      0xcd4 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(endian_utils-d-2016-camera.o)
- .debug_line    0x0000000000025c76     0x1257 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(mk60f15_lqfp144-d-2016-camera.o)
- .debug_line    0x0000000000026ecd      0x5de /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(cache-d-2016-camera.o)
- .debug_line    0x00000000000274ab      0x683 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(clock_utils-d-2016-camera.o)
- .debug_line    0x0000000000027b2e     0x1318 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(dma-d-2016-camera.o)
- .debug_line    0x0000000000028e46      0xf5f /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(dma_manager-d-2016-camera.o)
- .debug_line    0x0000000000029da5      0xeb8 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(dma_mux-d-2016-camera.o)
- .debug_line    0x000000000002ac5d      0x5d6 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(dwt-d-2016-camera.o)
- .debug_line    0x000000000002b233      0xef2 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(ftm-d-2016-camera.o)
- .debug_line    0x000000000002c125     0x143e /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(ftm_quad_decoder-d-2016-camera.o)
- .debug_line    0x000000000002d563     0x1810 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(gpio_array-d-2016-camera.o)
- .debug_line    0x000000000002ed73      0xcfb /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(soft_sccb_master-d-2016-camera.o)
- .debug_line    0x000000000002fa6e     0x16ef /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(spi_master-d-2016-camera.o)
- .debug_line    0x000000000003115d      0xa7c /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(spi_utils-d-2016-camera.o)
- .debug_line    0x0000000000031bd9     0x106b /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(sys_tick-d-2016-camera.o)
- .debug_line    0x0000000000032c44     0x1858 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(uart-d-2016-camera.o)
- .debug_line    0x000000000003449c     0x167d /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(soft_i2c_master-d-2016-camera.o)
+.debug_line     0x0000000000000000    0x35b17
+ .debug_line    0x0000000000000000     0x1dd2 obj/car-d-2016-camera.o
+ .debug_line    0x0000000000001dd2     0x142d obj/main-d-2016-camera.o
+ .debug_line    0x00000000000031ff     0x1fbc obj/pVarManager-d-2016-camera.o
+ .debug_line    0x00000000000051bb     0x13e2 obj/RunMode-d-2016-camera.o
+ .debug_line    0x000000000000659d      0x36a /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(assert-d-2016-camera.o)
+ .debug_line    0x0000000000006907      0x591 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(startup-d-2016-camera.o)
+ .debug_line    0x0000000000006e98      0x382 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(system-d-2016-camera.o)
+ .debug_line    0x000000000000721a      0x623 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(fpu-d-2016-camera.o)
+ .debug_line    0x000000000000783d     0x141b /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(ftm_pwm-d-2016-camera.o)
+ .debug_line    0x0000000000008c58     0x160b /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(gpio-d-2016-camera.o)
+ .debug_line    0x000000000000a263      0xf77 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(mcg-d-2016-camera.o)
+ .debug_line    0x000000000000b1da     0x10de /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(pin-d-2016-camera.o)
+ .debug_line    0x000000000000c2b8     0x139a /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(pin_isr_manager-d-2016-camera.o)
+ .debug_line    0x000000000000d652      0xea6 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(sim-d-2016-camera.o)
+ .debug_line    0x000000000000e4f8      0x47a /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(syscall-d-2016-camera.o)
+ .debug_line    0x000000000000e972      0x564 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(vectors-d-2016-camera.o)
+ .debug_line    0x000000000000eed6      0xe2d /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(watchdog-d-2016-camera.o)
+ .debug_line    0x000000000000fd03      0xc36 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(ab_encoder-d-2016-camera.o)
+ .debug_line    0x0000000000010939     0x108f /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(button-d-2016-camera.o)
+ .debug_line    0x00000000000119c8      0xc8b /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(dir_motor-d-2016-camera.o)
+ .debug_line    0x0000000000012653      0xdf3 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(encoder-d-2016-camera.o)
+ .debug_line    0x0000000000013446     0x11b3 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(joystick-d-2016-camera.o)
+ .debug_line    0x00000000000145f9      0xd98 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(jy_mcu_bt_106-d-2016-camera.o)
+ .debug_line    0x0000000000015391     0x1f80 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(ov7725-d-2016-camera.o)
+ .debug_line    0x0000000000017311      0xe8b /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(ov7725_configurator-d-2016-camera.o)
+ .debug_line    0x000000000001819c      0xcd5 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(system-d-2016-camera.o)
+ .debug_line    0x0000000000018e71     0x2aa8 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(uart_device-d-2016-camera.o)
+ .debug_line    0x000000000001b919     0x1131 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(lcd_console-d-2016-camera.o)
+ .debug_line    0x000000000001ca4a     0x14d2 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(lcd_typewriter-d-2016-camera.o)
+ .debug_line    0x000000000001df1c      0xbd7 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(led-d-2016-camera.o)
+ .debug_line    0x000000000001eaf3      0xd33 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(motor-d-2016-camera.o)
+ .debug_line    0x000000000001f826      0xdfd /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(servo-d-2016-camera.o)
+ .debug_line    0x0000000000020623      0xbe4 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(simple_buzzer-d-2016-camera.o)
+ .debug_line    0x0000000000021207     0x127f /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(st7735r-d-2016-camera.o)
+ .debug_line    0x0000000000022486     0x12a6 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(sys_tick_timer-d-2016-camera.o)
+ .debug_line    0x000000000002372c      0xbbe /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(trs_d05-d-2016-camera.o)
+ .debug_line    0x00000000000242ea      0xcb6 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(us_100-d-2016-camera.o)
+ .debug_line    0x0000000000024fa0      0xcd4 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(endian_utils-d-2016-camera.o)
+ .debug_line    0x0000000000025c74     0x1257 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(mk60f15_lqfp144-d-2016-camera.o)
+ .debug_line    0x0000000000026ecb      0x5de /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(cache-d-2016-camera.o)
+ .debug_line    0x00000000000274a9      0x683 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(clock_utils-d-2016-camera.o)
+ .debug_line    0x0000000000027b2c     0x1318 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(dma-d-2016-camera.o)
+ .debug_line    0x0000000000028e44      0xf5f /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(dma_manager-d-2016-camera.o)
+ .debug_line    0x0000000000029da3      0xeb8 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(dma_mux-d-2016-camera.o)
+ .debug_line    0x000000000002ac5b      0x5d6 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(dwt-d-2016-camera.o)
+ .debug_line    0x000000000002b231      0xef2 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(ftm-d-2016-camera.o)
+ .debug_line    0x000000000002c123     0x143e /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(ftm_quad_decoder-d-2016-camera.o)
+ .debug_line    0x000000000002d561     0x1810 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(gpio_array-d-2016-camera.o)
+ .debug_line    0x000000000002ed71      0xcfb /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(soft_sccb_master-d-2016-camera.o)
+ .debug_line    0x000000000002fa6c     0x16ef /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(spi_master-d-2016-camera.o)
+ .debug_line    0x000000000003115b      0xa7c /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(spi_utils-d-2016-camera.o)
+ .debug_line    0x0000000000031bd7     0x106b /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(sys_tick-d-2016-camera.o)
+ .debug_line    0x0000000000032c42     0x1858 /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(uart-d-2016-camera.o)
+ .debug_line    0x000000000003449a     0x167d /Users/kittylgnkwok/git/libsccc/lib/libsccc-d-2016-camera.a(soft_i2c_master-d-2016-camera.o)
 
 .debug_str      0x0000000000000000    0x8f076
  .debug_str     0x0000000000000000    0x12cf7 obj/car-d-2016-camera.o
