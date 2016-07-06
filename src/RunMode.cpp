@@ -11,11 +11,11 @@
 
 
 RunMode::RunMode():
-servoErr(0), servoPrevErr(0), ideal_motor_speed(100), maxMotorSpeed(350), minMotorSpeed(80), ideal_servo_degree(SERVO_MID), encoder_count(0), motorErr(0), motorPrevErr(0), maxServoAngle(990), minServoAngle(580),encoderZeroCount(0){
+servoErr(0), servoPrevErr(0), ideal_motor_speed(80), maxMotorSpeed(350), minMotorSpeed(80), ideal_servo_degree(SERVO_MID), encoder_count(0), motorErr(0), motorPrevErr(0), maxServoAngle(990), minServoAngle(580),encoderZeroCount(0), Ideal_encoder_count(0){
 	//can initialize the variable here,
 	//servo
 	s_lkp = 11.0f;
-	s_lkd = 0.0f;
+	s_lkd = 5.0f;
 	s_rkp = 1.30f;
 	s_rkd = 6.0f;
 	servoTurn = 0;
@@ -29,6 +29,7 @@ RunMode::~RunMode(){
 
 }
 
+//POSITION PID
 int16_t RunMode::turningPID (int16_t mid_line, int16_t value){
 	//mid_line: current beacon mid, value: ideal turning position
 	//int16_t degree; //max: 800+265, min: 800-265
@@ -50,6 +51,7 @@ int16_t RunMode::turningPID (int16_t mid_line, int16_t value){
 	//return 0;//your implementation
 }
 
+//MOTOR PID
 int16_t RunMode::motorPID (int16_t ideal_encoder_count){
 	encoder_count = get_encoder_count();
 

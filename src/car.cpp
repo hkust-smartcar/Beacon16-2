@@ -25,6 +25,7 @@ Car::Car(): STATE1M(1100), STATE2M(1300), STATE3M(1500), STATE4M(1500), STATE5M(
 	encoder = new AbEncoder(GetAbEncoderConfig());
 	servo = new TrsD05(GetServoConfig());
 	motor = new DirMotor(GetDirmotorConfig());
+	motor->SetPower(0);
 	ultrasonic = new Us100(GetUs100Config());
 
 	button1 = new Button(GetButton1Config());
@@ -52,6 +53,7 @@ Car::~Car(){
 	delete Led4 ;
 	delete encoder ;
 	delete servo ;
+	motor->SetPower(0);
 	delete motor ;
 	ultrasonic->Stop();
 	delete ultrasonic;
@@ -260,7 +262,7 @@ void Car::longestwhiteline(bool whitemap[78][58]){
 }
 */
 
-
+//MAJOR IMAGE PROCESSING
 int8_t Car::CheckLightIndex(const Byte* src){
 	rowIndex=0;
 
@@ -423,7 +425,7 @@ void Car::RUN_STATE(int8_t state){
 //			//turningPID(mid,70);
 //			turningPID(mid, l_margin-23);
 //		}
-		motorPID(STATE1M);
+		motorPID(STATE1M+100);
 		//motor_control(150,1);
 		break;
 	}
@@ -437,7 +439,7 @@ void Car::RUN_STATE(int8_t state){
 //			if(mid>39){
 //				turningPID(mid,66);
 //			}
-			turningPID(r_margin+5, r_margin+5);
+			turningPID(r_margin, r_margin+5);
 			motorPID(STATE2M);
 			//motor_control(130,1);
 			break;
@@ -446,24 +448,24 @@ void Car::RUN_STATE(int8_t state){
 	{
 		//normal PID
 		//turningPID(mid,40);
-		turningPID(r_margin+5, r_margin+5);
-		motorPID(STATE3M+200);
+		turningPID(r_margin, r_margin+5);
+		motorPID(STATE3M);
 		//motor_control(165,1);
 		break;
 	}
 	case 4:
 	{
 		//turn left / right slowly
-		if(temp<50){
-			turningPID(r_margin+5, r_margin+5);
+		if(temp<80){
+			turningPID(970, r_margin+5);
 		}else{
-		turningPID(l_margin-5, l_margin-5);
+		turningPID(670, l_margin-5);
 		}
 		temp+=1;
-		motorPID(STATE4M+200);
+		motorPID(STATE4M);
 //		servo_control(950);
 //		motor_control(100,1);
-		if(temp>100){
+		if(temp>160){
 			temp=0;
 		}
 		break;

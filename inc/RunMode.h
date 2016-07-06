@@ -49,7 +49,7 @@ public:
 	int16_t servoErr, servoPrevErr;
 	int16_t motorErr, motorPrevErr;
 	int16_t motorSum = 0;
-	int16_t Ideal_encoder_count = 0;
+	int16_t Ideal_encoder_count;
 	//int8_t encoderPrevZeroCount;
 	int8_t encoderZeroCount;
 	float s_lkp;
