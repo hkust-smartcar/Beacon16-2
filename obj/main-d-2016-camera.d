@@ -1,6 +1,7 @@
 obj/main-d-2016-camera.o: src/main.cpp \
+ /Users/kittylgnkwok/git/libsccc/inc/libutil/pGrapher.h \
  /Users/kittylgnkwok/git/libsccc/inc/libsc/system.h \
- /Users/kittylgnkwok/git/libsccc/inc/libsc/timer.h inc/pVarManager.h \
+ /Users/kittylgnkwok/git/libsccc/inc/libsc/timer.h \
  /Users/kittylgnkwok/git/libsccc/inc/libsc/k60/ftdi_ft232r.h \
  /Users/kittylgnkwok/git/libsccc/inc/libsc/k60/uart_device.h \
  /Users/kittylgnkwok/git/libsccc/inc/libbase/k60/dma.h \

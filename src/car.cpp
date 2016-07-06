@@ -11,11 +11,12 @@
 #define POWREGULATOR(lower, mpower, upper)(((mpower < lower) ? lower : ((mpower > upper))? upper : mpower))
 #define SIZE_THRESHOLD 20
 #define PI 3.14159
+
 //#define bound(lower,mpower,upper) (((mpower < lower) ? lower : ((mpower > upper))? upper : mpower))
 
 using namespace std;
 
-Car::Car(){
+Car::Car(): STATE1M(1100), STATE2M(1300), STATE3M(1500), STATE4M(1500), STATE5M(1000), DEFAULTM(1500){
 
 	Led1 = new Led(GetLed1Config());
 	Led2 = new Led(GetLed2Config());
@@ -25,7 +26,7 @@ Car::Car(){
 	servo = new TrsD05(GetServoConfig());
 	motor = new DirMotor(GetDirmotorConfig());
 	ultrasonic = new Us100(GetUs100Config());
-	ultrasonic->Start();
+
 	button1 = new Button(GetButton1Config());
 	button2 = new Button(GetButton2Config());
 	joystick = new Joystick(GetJoystickConfig());
@@ -37,10 +38,6 @@ Car::Car(){
 	LcdTypewriter::Config LcdWconfig;
 	LcdWconfig.lcd = LCD;
 	LCDwriter = new LcdTypewriter(LcdWconfig);
-
-	LcdConsole::Config LCDCConfig;
-	LCDCConfig.lcd = LCD;
-	LCDconsole = new LcdConsole(LCDCConfig);
 
 	memset(data, 0, 8 * 600);
 	memset(image, false, true * 80 * 60);
@@ -341,13 +338,25 @@ void Car::imageCorrection(const Byte* src){
 	}
 }
 
+/*
 uint16_t Car::u_distance(){
 	uint16_t dist=1;
 	ultrasonic->Start();
-	dist = ultrasonic->GetDistance();
+	//temp+=1;
+	while(!ultrasonic->IsAvailable() && temp<1000){
+		temp+=1;
+	}
+	dist = (uint16_t) ultrasonic->GetDistance();
+	//dist = (uint16_t) ultrasonic->GetDistance();
+	sprintf(msg,"Dist: %d %d", dist);
+	printCar(msg,100);
+	temp=0;
+	ultrasonic->Stop();
+	//dist = ultrasonic->GetDistance();
 
 	return dist;
 }
+*/
 
 int8_t Car::get_RState(){
 	//distance_to_beacon = (60-rowIndex);
@@ -355,13 +364,13 @@ int8_t Car::get_RState(){
 	int8_t state=0;
 	//STATE = LOCATING;
 	if (distance_to_beacon<81){
-		if(distance_to_beacon < 27){
+		if(distance_to_beacon < 40){
 			//state = AVOID;
 			state=1;
-		}else if(distance_to_beacon < 45){
+		}else if(distance_to_beacon < 50){
 			//state = CLOSE;
 			state=2;
-		}else if (distance_to_beacon > 44){
+		}else if (distance_to_beacon > 51){
 			//state = FAR;
 			state=3;
 		}
@@ -369,9 +378,13 @@ int8_t Car::get_RState(){
 		//STATE = LOCATING;
 		state=4;
 	}
-	if(prevState==1 && state==4){
+
+	if(prevState==1){
 		state=5;
 	}
+//	if(u_distance()<100){
+//			state=5;
+//	}
 	prevState= state;
 	return state;
 }
@@ -401,16 +414,16 @@ void Car::RUN_STATE(int8_t state){
 	{
 		//if right-> turn more right, if left->turn more left
 //		if(mid<40){
-//			//keep beacon on left hand side
+//			//keep beacon on right hand side
 //			//turningPID(mid, 10);
-			turningPID(mid, r_margin+25);
+			turningPID(r_margin+5, r_margin+10);
 //
 //		}
 //		if(mid>39){
 //			//turningPID(mid,70);
 //			turningPID(mid, l_margin-23);
 //		}
-		motorPID(1100);
+		motorPID(STATE1M);
 		//motor_control(150,1);
 		break;
 	}
@@ -424,8 +437,8 @@ void Car::RUN_STATE(int8_t state){
 //			if(mid>39){
 //				turningPID(mid,66);
 //			}
-			turningPID(mid, r_margin+13);
-			motorPID(1300);
+			turningPID(r_margin+5, r_margin+5);
+			motorPID(STATE2M);
 			//motor_control(130,1);
 			break;
 		}
@@ -433,38 +446,38 @@ void Car::RUN_STATE(int8_t state){
 	{
 		//normal PID
 		//turningPID(mid,40);
-		turningPID(mid, r_margin+13);
-		motorPID(1500);
+		turningPID(r_margin+5, r_margin+5);
+		motorPID(STATE3M+200);
 		//motor_control(165,1);
 		break;
 	}
 	case 4:
 	{
 		//turn left / right slowly
-//		if(temp<100){
-//			servo_control(970);
-//		}else{
-			servo_control(600);
-//		}
-//		temp+=1;
-		motorPID(1500);
+		if(temp<50){
+			turningPID(r_margin+5, r_margin+5);
+		}else{
+		turningPID(l_margin-5, l_margin-5);
+		}
+		temp+=1;
+		motorPID(STATE4M+200);
 //		servo_control(950);
 //		motor_control(100,1);
-//		if(temp>200){
-//			temp=0;
-//		}
+		if(temp>100){
+			temp=0;
+		}
 		break;
 	}
 	case 5:
 	{
-		servo_control(670);
-		motorPID(1000);
+		servo_control(990);
+		motorPID(STATE5M);
 		break;
 	}
 	default:
 	{
-		servo_control(820);
-		motorPID(1500);
+		servo_control(670);
+		motorPID(DEFAULTM);
 		//motor_control(130,1);
 	}
 	}

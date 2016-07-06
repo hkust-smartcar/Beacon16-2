@@ -141,6 +141,7 @@ public:
 	uint16_t distance_to_beacon;
 	int16_t temp=0;
 	int8_t prevState=0;
+	int16_t STATE1M, STATE2M, STATE3M, STATE4M, STATE5M, DEFAULTM;
 
 	int8_t mid = 0;
 

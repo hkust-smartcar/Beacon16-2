@@ -11,8 +11,18 @@
 
 
 RunMode::RunMode():
-servoErr(0), servoPrevErr(0), ideal_motor_speed(80), maxMotorSpeed(350), minMotorSpeed(80), ideal_servo_degree(SERVO_MID), encoder_count(0), motorErr(0), motorPrevErr(0), maxServoAngle(990), minServoAngle(580),encoderZeroCount(0){
+servoErr(0), servoPrevErr(0), ideal_motor_speed(100), maxMotorSpeed(350), minMotorSpeed(80), ideal_servo_degree(SERVO_MID), encoder_count(0), motorErr(0), motorPrevErr(0), maxServoAngle(990), minServoAngle(580),encoderZeroCount(0){
 	//can initialize the variable here,
+	//servo
+	s_lkp = 11.0f;
+	s_lkd = 0.0f;
+	s_rkp = 1.30f;
+	s_rkd = 6.0f;
+	servoTurn = 0;
+	//motor
+	m_Kp = 0.45f;
+	m_Ki = 0.05f;
+	m_kd = 0;
 }
 
 RunMode::~RunMode(){
@@ -23,44 +33,24 @@ int16_t RunMode::turningPID (int16_t mid_line, int16_t value){
 	//mid_line: current beacon mid, value: ideal turning position
 	//int16_t degree; //max: 800+265, min: 800-265
 	//int16_t temp;
-	servoErr = mid_line-value;
-	//float kp, ki, kd;
-
-	s_lkp = 1.38f;
-	s_rkp = 1.38f;
-	s_lkd = 10.0f;
-	s_rkd = 10.0f;
-
-	//FORMULA: degree = kp*servoErr + kd*servoPrevErr
-	if(mid_line >40){
-		ideal_servo_degree = int16_t(SERVO_MID + s_lkp*abs(servoErr*servoErr) + s_lkd*(servoErr-servoPrevErr));
-	}else if(mid_line < 41){
-		ideal_servo_degree = int16_t(SERVO_MID - s_lkp*abs(servoErr*servoErr) - s_lkd*(servoErr-servoPrevErr));
-	}
-
-	servo->SetDegree(libutil::Clamp(minServoAngle, ideal_servo_degree, maxServoAngle));
-	//OR servo_control(ideal_servo_degree);
 
 	servoPrevErr = servoErr;
+	servoErr = 40 - mid_line;
+	//float kp, ki, kd;
+	//FORMULA: degree = kp*servoErr + kd*servoPrevErr
+	servoTurn = s_lkp*servoErr + s_lkd*(servoErr-servoPrevErr);
+	ideal_servo_degree = SERVO_MID - servoTurn;
 
+//	if(value >= 0)	servo_control(ideal_servo_degree);
+//	else  servo_control(ideal_servo_degree+50);
+//	servo->SetDegree(libutil::Clamp(minServoAngle, ideal_servo_degree, maxServoAngle));
 
-//	sprintf(msg, "Degree @%d", ideal_servo_degree);
-//	printCar(msg, 132);
+	servo_control(ideal_servo_degree);
 	return ideal_servo_degree;
 	//return 0;//your implementation
-
 }
 
 int16_t RunMode::motorPID (int16_t ideal_encoder_count){
-	Ideal_encoder_count = ideal_encoder_count;
-
-	//!!! I just set the encoder count to 1000 here
-	Ideal_encoder_count = 1000;
-
-	m_Kp = 0.45f;
-	m_Ki = 0.05f;
-	m_kd = 0;
-
 	encoder_count = get_encoder_count();
 
 //	if(!encoder_count){
@@ -103,7 +93,7 @@ int16_t RunMode::motorPID (int16_t ideal_encoder_count){
 	ideal_motor_speed = (uint16_t) temp;
 //	ideal_motor_speed = ideal_motor_speed + m_Kp * (motorErr - motorPrevErr) + m_Ki * (motorErr);
 
-	motor_control(ideal_motor_speed, is_clockwise);
+	motor_control(ideal_motor_speed,is_clockwise);
 
 	return ideal_motor_speed;
 	// tips, remember to add something to protect your motor, for example:

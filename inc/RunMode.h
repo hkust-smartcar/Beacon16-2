@@ -56,7 +56,7 @@ public:
 	float s_lkd;
 	float s_rkp;
 	float s_rkd;
-
+	float servoTurn;
 	float m_Kp;
 	float m_Ki;
 	float m_kd;
