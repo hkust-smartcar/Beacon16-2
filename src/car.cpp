@@ -267,6 +267,7 @@ int8_t Car::CheckLightIndex(const Byte* src){
 	rowIndex=0;
 	uint32_t i, j, k, m;
 	uint32_t pixelCounter = 0, s=0, prerow=0, row=0;
+
 	for(j=0; j<600; j+=10){
 		m=j/10;
 		LightIndex[m] = 0;
@@ -299,7 +300,9 @@ int8_t Car::CheckLightIndex(const Byte* src){
 //	}
 
 
-	if (rowIndex==0 && LightIndex[rowIndex]<5){
+
+
+	if (rowIndex==0 && LightIndex[rowIndex]<2){
 		//no white found
 		distance_to_beacon=99;
 		return 99;
@@ -310,6 +313,43 @@ int8_t Car::CheckLightIndex(const Byte* src){
 	int8_t tempDist =5;
 	LightX = 0;
 	LightW = 0;
+
+//
+//	 uint16_t count=77;
+//	 uint16_t x=0, c=0, anoj=0;
+//	 for (uint8_t i=0; i<10; i++){
+//		 s=data[rowIndex*10+i];
+//		 for(uint8_t j=0; j<8; j++){
+//			 if(!(s>>(7-j))&1u){
+//				 x = rowIndex*10+i*8+j;
+//				 l_margin = x;
+//				 x += 1;
+//				while((!(data[rowIndex*10+c]>>(7-j))&1u) && x<78){
+//					x+=1;
+//					c+=1;
+//					j+=1;
+//
+//					if(c==10) c=0;
+//					if(anoj==8)	anoj=0;
+//
+//				}
+//				r_margin = x;
+//
+//				if(r_margin < l_margin){
+//					return 100;
+//				}
+//				if((r_margin - l_margin) < tempDist){
+//					x = r_margin;
+//				}else{
+//					tempDist = r_margin - l_margin;
+//					LightX = l_margin;
+//					LightW = r_margin;
+//				}
+//			 }
+//
+//		 }
+//	 }
+
 
 	for(int8_t x=2; x<78; x++){
 
@@ -339,6 +379,8 @@ int8_t Car::CheckLightIndex(const Byte* src){
 		 }
 
 	}
+
+
 	if ( LightX ==0 && LightW ==0){
 		//no W code 101
 		distance_to_beacon=101;
@@ -477,7 +519,8 @@ void Car::RUN_STATE(int8_t state){
 //			temp=320;
 //		}
 //		if(temp>160){
-			turningPID(970, r_margin+5);
+			turningPID(l_margin+10, r_margin+5);
+			//servo_control(670);
 //			temp--;
 //		}else if(temp>1){
 //			turningPID(670, l_margin-5);
@@ -494,7 +537,7 @@ void Car::RUN_STATE(int8_t state){
 	}
 	case 5:
 	{
-		servo_control(990);
+		servo_control(670);
 		motorPID(DEFAULTM);
 		break;
 	}

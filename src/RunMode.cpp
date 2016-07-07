@@ -15,7 +15,7 @@ servoErr(0), servoPrevErr(0), ideal_motor_speed(80), maxMotorSpeed(350), minMoto
 	//can initialize the variable here,
 	//servo
 	s_lkp = 10.0f;
-	s_lkd = 0.0f;
+	s_lkd = 1.0f;
 	s_rkp = 1.30f;
 	s_rkd = 6.0f;
 	servoTurn = 0;

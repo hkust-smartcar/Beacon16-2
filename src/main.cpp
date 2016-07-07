@@ -92,6 +92,7 @@ int main(void)
 	int8_t value;
 	int8_t state;
 	int16_t degree;
+	int16_t looptime=0;
 	trytryhaha.servo_control(820);
 	trytryhaha.motor_control(100,1);
 	int16_t count1=0;
@@ -144,6 +145,7 @@ int main(void)
 		}
 
 		if((int16_t)(cur_Time - cur_Time1) > 10){
+			looptime++;
 			cur_Time1 = cur_Time;
 //			grapher.sendWatchData();
 			trytryhaha.get_raw_image();
@@ -154,9 +156,22 @@ int main(void)
 
 
 			value = trytryhaha.CheckLightIndex(trytryhaha.data);
+			//if state>=4 : beacon not found, run second camera
 			state = trytryhaha.get_RState();
-
-			if(counter <1)trytryhaha.RUN_STATE(state);
+			if(state>3){
+				//run 2nd camera:
+				//CheckLightIndex on 2nd camera
+				if(state<4){
+					//reverse car untill beacon not found i.e. until state>3
+					reverseFlag=true;
+					//...2ndCameraRunState
+				}
+			}
+			reverseFlag = false;
+			if(counter <1 && reverseFlag==false)trytryhaha.RUN_STATE(state);
+			if(looptime>2699){
+				looptime=0;
+			}
 
 //			int16_t val = (int16_t) value;
 //			int16_t lightindex = (int16_t) trytryhaha.LightIndex[trytryhaha.rowIndex];
@@ -173,7 +188,8 @@ int main(void)
 			//hahaha
 
 		//System::DelayMs(10);
-		if((int16_t)(cur_Time-cur_Time2) > 30){
+		//if((int16_t)(cur_Time-cur_Time2) > 30){
+		if((looptime%3)==1){
 			cur_Time2 = cur_Time;
 			trytryhaha.update_encoder();
 			if(counter >1){
