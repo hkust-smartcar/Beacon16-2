@@ -14,8 +14,8 @@ RunMode::RunMode():
 servoErr(0), servoPrevErr(0), ideal_motor_speed(80), maxMotorSpeed(350), minMotorSpeed(80), ideal_servo_degree(SERVO_MID), encoder_count(0), motorErr(0), motorPrevErr(0), maxServoAngle(990), minServoAngle(580),encoderZeroCount(0), Ideal_encoder_count(0){
 	//can initialize the variable here,
 	//servo
-	s_lkp = 11.0f;
-	s_lkd = 5.0f;
+	s_lkp = 10.0f;
+	s_lkd = 0.0f;
 	s_rkp = 1.30f;
 	s_rkd = 6.0f;
 	servoTurn = 0;

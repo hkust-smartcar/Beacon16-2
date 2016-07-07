@@ -381,9 +381,9 @@ int8_t Car::get_RState(){
 		state=4;
 	}
 
-	if(prevState==1){
-		state=5;
-	}
+//	if(prevState==1){
+//		state=5;
+//	}
 //	if(u_distance()<100){
 //			state=5;
 //	}
@@ -418,7 +418,7 @@ void Car::RUN_STATE(int8_t state){
 //		if(mid<40){
 //			//keep beacon on right hand side
 //			//turningPID(mid, 10);
-			turningPID(r_margin+5, r_margin+10);
+			turningPID(r_margin+3, r_margin+10);
 //
 //		}
 //		if(mid>39){
@@ -439,8 +439,8 @@ void Car::RUN_STATE(int8_t state){
 //			if(mid>39){
 //				turningPID(mid,66);
 //			}
-			turningPID(r_margin, r_margin+5);
-			motorPID(STATE2M);
+			turningPID(r_margin+3, r_margin+5);
+			motorPID(STATE2M+100);
 			//motor_control(130,1);
 			break;
 		}
@@ -448,32 +448,37 @@ void Car::RUN_STATE(int8_t state){
 	{
 		//normal PID
 		//turningPID(mid,40);
-		turningPID(r_margin, r_margin+5);
-		motorPID(STATE3M);
+		turningPID(r_margin+1, r_margin+5);
+		motorPID(STATE3M+100);
 		//motor_control(165,1);
 		break;
 	}
 	case 4:
 	{
 		//turn left / right slowly
-		if(temp<80){
+//		if(temp==1){
+//			temp=320;
+//		}
+//		if(temp>160){
 			turningPID(970, r_margin+5);
-		}else{
-		turningPID(670, l_margin-5);
-		}
-		temp+=1;
-		motorPID(STATE4M);
+//			temp--;
+//		}else if(temp>1){
+//			turningPID(670, l_margin-5);
+//			temp--;
+//		}else if(temp==1){
+//			temp=0;
+//		}
+
+		motorPID(STATE4M+100);
 //		servo_control(950);
 //		motor_control(100,1);
-		if(temp>160){
-			temp=0;
-		}
+
 		break;
 	}
 	case 5:
 	{
 		servo_control(990);
-		motorPID(STATE5M);
+		motorPID(DEFAULTM);
 		break;
 	}
 	default:

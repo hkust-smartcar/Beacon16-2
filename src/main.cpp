@@ -32,7 +32,7 @@ int main(void)
 	//use tick
 	//...
 	//Car *trycar;
-	pGrapher grapher;
+//	pGrapher grapher;
 	RunMode trytryhaha;
 
 
@@ -99,11 +99,11 @@ int main(void)
 	int16_t count2=0;
 
 //
-	grapher.addSharedVar(&trytryhaha.s_lkp,"s_lkd");
-	grapher.addSharedVar(&trytryhaha.s_lkp,"s_lkp");
-	grapher.addSharedVar(&trytryhaha.m_Kp,"m_Kp");
-	grapher.addSharedVar(&trytryhaha.m_Ki,"m_Ki");
-	grapher.addSharedVar(&trytryhaha.m_kd,"m_kd");
+//	grapher.addSharedVar(&trytryhaha.s_lkp,"s_lkd");
+//	grapher.addSharedVar(&trytryhaha.s_lkp,"s_lkp");
+//	grapher.addSharedVar(&trytryhaha.m_Kp,"m_Kp");
+//	grapher.addSharedVar(&trytryhaha.m_Ki,"m_Ki");
+//	grapher.addSharedVar(&trytryhaha.m_kd,"m_kd");
 
 //Test Ticks & Servo
 //	while(1){
@@ -145,10 +145,12 @@ int main(void)
 
 		if((int16_t)(cur_Time - cur_Time1) > 10){
 			cur_Time1 = cur_Time;
-			grapher.sendWatchData();
+//			grapher.sendWatchData();
 			trytryhaha.get_raw_image();
 			trytryhaha.imageCorrection(trytryhaha.data);
-//			trytryhaha.printRawCamGraph(0,0);
+//			if(!trytryhaha.getbutton(0)){
+//				trytryhaha.printRawCamGraph(0,0);
+//			}
 
 
 			value = trytryhaha.CheckLightIndex(trytryhaha.data);
@@ -162,12 +164,12 @@ int main(void)
 			//PRINT MID, DEGREE & MARGIN
 //			sprintf(message, "L mid @%d", value);
 //			trytryhaha.printvalue(0, 68, 128,40, message);
-//			sprintf(message, "state %d", state);
-//			trytryhaha.printvalue(0, 132, 128,40, message);
-//			sprintf(message, "Degree @%d", trytryhaha.ideal_servo_degree);
-//			trytryhaha.printCar(message, 116);
-//			sprintf(message, "Speed %d", trytryhaha.ideal_motor_speed);
-//			trytryhaha.printvalue(0, 84, 128,40, message);
+			sprintf(message, "state %d", state);
+			trytryhaha.printvalue(0, 132, 128,40, message);
+			sprintf(message, "Degree @%d", trytryhaha.ideal_servo_degree);
+			trytryhaha.printCar(message, 116);
+			sprintf(message, "L%d R%d", trytryhaha.l_margin, trytryhaha.r_margin);
+			trytryhaha.printvalue(0, 84, 128,40, message);
 			//hahaha
 
 		//System::DelayMs(10);
