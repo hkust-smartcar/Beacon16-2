@@ -265,21 +265,38 @@ void Car::longestwhiteline(bool whitemap[78][58]){
 //MAJOR IMAGE PROCESSING
 int8_t Car::CheckLightIndex(const Byte* src){
 	rowIndex=0;
-
-	for (int8_t y=0; y<60; y++){
-		LightIndex[y]=0;
-			for (int8_t x = 0; x<80; x++){
-
-				//int16_t temp = src[10*(x)+(y/8)];//show the byte
-
-				if(GetPixel(src, x, y)){
-					LightIndex[y]+=1;
+	uint32_t i, j, k, m;
+	uint32_t pixelCounter = 0, s=0, prerow=0, row=0;
+	for(j=0; j<600; j+=10){
+		m=j/10;
+		LightIndex[m] = 0;
+		for(i=0; i<10; i++){
+			s=data[i+j];
+			for(k=0; k<8; k++){
+				if(!((s>>(7-k))&1u)){
+					LightIndex[m]++;
 				}
 			}
-			if(LightIndex[rowIndex] < LightIndex[y]){
-				rowIndex=y;
-			}
+		}
+		if(LightIndex[rowIndex] < LightIndex[m]){
+			rowIndex=m;
+		}
 	}
+
+//	for (uint32_t y=0; y<60; y++){
+//		LightIndex[y]=0;
+//			for (int8_t x = 0; x<80; x++){
+//
+//				//int16_t temp = src[10*(x)+(y/8)];//show the byte
+//
+//				if(GetPixel(src, x, y)){
+//					LightIndex[y]+=1;
+//				}
+//			}
+//			if(LightIndex[rowIndex] < LightIndex[y]){
+//				rowIndex=y;
+//			}
+//	}
 
 
 	if (rowIndex==0 && LightIndex[rowIndex]<5){

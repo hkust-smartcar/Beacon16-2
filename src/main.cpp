@@ -162,8 +162,8 @@ int main(void)
 //			int16_t lightindex = (int16_t) trytryhaha.LightIndex[trytryhaha.rowIndex];
 		}
 			//PRINT MID, DEGREE & MARGIN
-//			sprintf(message, "L mid @%d", value);
-//			trytryhaha.printvalue(0, 68, 128,40, message);
+			sprintf(message, "L mid @%d", value);
+			trytryhaha.printvalue(0, 68, 128,40, message);
 			sprintf(message, "state %d", state);
 			trytryhaha.printvalue(0, 132, 128,40, message);
 			sprintf(message, "Degree @%d", trytryhaha.ideal_servo_degree);
