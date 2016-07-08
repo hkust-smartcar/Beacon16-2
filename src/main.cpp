@@ -151,22 +151,27 @@ int main(void)
 			trytryhaha.get_raw_image();
 			trytryhaha.imageCorrection(trytryhaha.data);
 //			if(!trytryhaha.getbutton(0)){
-//				trytryhaha.printRawCamGraph(0,0);
+				trytryhaha.printRawCamGraph(0,0);
 //			}
 
 
 			value = trytryhaha.CheckLightIndex(trytryhaha.data);
 			//if state>=4 : beacon not found, run second camera
-			state = trytryhaha.get_RState();
-			if(state>3){
-				//run 2nd camera:
-				//CheckLightIndex on 2nd camera
-				if(state<4){
-					//reverse car untill beacon not found i.e. until state>3
-					reverseFlag=true;
-					//...2ndCameraRunState
-				}
-			}
+			state = trytryhaha.get_RState(value);
+//			if(state>3){
+//				//run 2nd camera:
+//				//CheckLightIndex on 2nd camera base on 2nd cam data;
+//				int8_t Secondvalue = trytryhaha.CheckLightIndex(trytryhaha.data);
+//
+//				if(state<4){
+//					//reverse car untill beacon not found i.e. until state>3
+//					reverseFlag=true;
+//					int8_t SecondState =0;
+//					SecondState = trytryhaha.get_RState(Secondvalue);
+//					//...2ndCameraRunState
+//					trytryhaha.RUN_2ndCAMSTATE(SecondState);
+//				}
+//			}
 			reverseFlag = false;
 			if(counter <1 && reverseFlag==false)trytryhaha.RUN_STATE(state);
 			if(looptime>2699){

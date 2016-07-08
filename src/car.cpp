@@ -30,7 +30,7 @@ Car::Car(): STATE1M(1100), STATE2M(1300), STATE3M(1500), STATE4M(1500), STATE5M(
 
 	button1 = new Button(GetButton1Config());
 	button2 = new Button(GetButton2Config());
-	joystick = new Joystick(GetJoystickConfig());
+//	joystick = new Joystick(GetJoystickConfig());
 	LCD = new St7735r(GetLcdConfig());
 	buzzer = new SimpleBuzzer(GetBuzzerConfig());
 	cam=new k60::Ov7725(GetCamConfig());
@@ -59,7 +59,7 @@ Car::~Car(){
 	delete ultrasonic;
 	delete button1 ;
 	delete button2 ;
-	delete joystick ;
+//	delete joystick ;
 	delete LCD;
 	delete buzzer ;
 	delete LCDwriter;
@@ -388,7 +388,7 @@ int8_t Car::CheckLightIndex(const Byte* src){
 	}
 	mid = (LightX + LightW)/2;
 	int8_t beacon_mid = mid;
-	return beacon_mid;
+	return distance_to_beacon;
 }
 
 void Car::imageCorrection(const Byte* src){
@@ -419,19 +419,19 @@ uint16_t Car::u_distance(){
 }
 */
 
-int8_t Car::get_RState(){
+int8_t Car::get_RState(int8_t Distance_to_beacon){
 	//distance_to_beacon = (60-rowIndex);
 	//RunState state;
 	int8_t state=0;
 	//STATE = LOCATING;
-	if (distance_to_beacon<81){
-		if(distance_to_beacon < 40){
+	if (Distance_to_beacon<81){
+		if(Distance_to_beacon < 40){
 			//state = AVOID;
 			state=1;
-		}else if(distance_to_beacon < 50){
+		}else if(Distance_to_beacon < 50){
 			//state = CLOSE;
 			state=2;
-		}else if (distance_to_beacon > 51){
+		}else if (Distance_to_beacon > 51){
 			//state = FAR;
 			state=3;
 		}
@@ -459,16 +459,52 @@ void Car::exitState(int8_t state){
 
 }
 
+void Car::RUN_2ndCAMSTATE(int8_t state){
+	switch (state){
+
+	case 1:
+	{
+
+
+		break;
+	}
+	case 2:
+	{
+
+		break;
+	}
+
+	case 3:
+	{
+
+		break;
+	}
+
+	case 4:
+	{
+
+
+		break;
+	}
+
+	case 5:
+	{
+
+		break;
+	}
+
+	default:
+	{
+
+	}
+
+
+
+
+	}
+}
+
 void Car::RUN_STATE(int8_t state){
-//	if(prevState==1 && state==4){
-////		if(temp%2){
-////			servo_control(970);
-////		}else{
-//			servo_control(600);
-////		}
-//		motor_control(motorPID(2510),1);
-//		state=5;
-//	}
 	switch (state){
 
 	case 1:
@@ -934,9 +970,9 @@ bool Car::getbutton(int8_t id){
 	else return 0;
 }
 
-libsc::Joystick::State Car::getjoystick(){
-	return joystick->GetState();
-}
+//libsc::Joystick::State Car::getjoystick(){
+//	return joystick->GetState();
+//}
 
 
 void Car::get_raw_image(){//get image in 1D-Byte, then put into Car's private 'data[600]'

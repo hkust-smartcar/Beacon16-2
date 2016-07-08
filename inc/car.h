@@ -87,7 +87,7 @@ public:
 	void longestwhiteline(bool[78][58]);
 
 	//BEACON specific
-	int8_t get_RState();
+	int8_t get_RState(int8_t);
 	void imageCorrection(const Byte*, bool[78][58]);
 	void findLight(bool [78][58], bool [78][58], uint8_t);
 	uint16_t findLightbyByte(const Byte*, int8_t);
@@ -97,6 +97,7 @@ public:
 	int8_t CheckLightIndex(const Byte*);
 	void imageCorrection(const Byte*);
 	void RUN_STATE(int8_t);
+	void RUN_2ndCAMSTATE(int8_t);
 	void exitState(int8_t);
 	uint16_t u_distance();
 
@@ -164,7 +165,7 @@ protected:
 	libsc::Us100* ultrasonic=nullptr;
 	libsc::Button* button1=nullptr;
 	libsc::Button* button2=nullptr;
-	libsc::Joystick* joystick=nullptr;
+//	libsc::Joystick* joystick=nullptr;
 	libsc::St7735r* LCD=nullptr;
 	libsc::LcdConsole* LCDconsole=nullptr;
 	libsc::LcdTypewriter* LCDwriter=nullptr;
