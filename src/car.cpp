@@ -1,7 +1,7 @@
 /*
  * car.cpp
  *
- *  Created on: 2016?~1??16??
+ *  Created on: 
  *      Author: kitty kwok
  */
 #include "car.h"
@@ -22,26 +22,26 @@ Car::Car(): STATE1M(1100), STATE2M(1300), STATE3M(1500), STATE4M(1500), STATE5M(
 	Led2 = new Led(GetLed2Config());
 	Led3 = new Led(GetLed3Config());
 	Led4 = new Led(GetLed4Config());
-	encoder = new AbEncoder(GetAbEncoderConfig());
-	servo = new TrsD05(GetServoConfig());
-	motor = new DirMotor(GetDirmotorConfig());
-	motor->SetPower(0);
-	ultrasonic = new Us100(GetUs100Config());
+ 	encoder = new AbEncoder(GetAbEncoderConfig());
+// 	servo = new TrsD05(GetServoConfig());
+// 	motor = new DirMotor(GetDirmotorConfig());
+// 	motor->SetPower(0);
+// 	ultrasonic = new Us100(GetUs100Config());
 
-	button1 = new Button(GetButton1Config());
-	button2 = new Button(GetButton2Config());
-//	joystick = new Joystick(GetJoystickConfig());
-	LCD = new St7735r(GetLcdConfig());
-	buzzer = new SimpleBuzzer(GetBuzzerConfig());
-	cam=new k60::Ov7725(GetCamConfig());
-	cam->Start();
+// 	button1 = new Button(GetButton1Config());
+// 	button2 = new Button(GetButton2Config());
+// //	joystick = new Joystick(GetJoystickConfig());
+ 	LCD = new St7735r(GetLcdConfig());
+// 	buzzer = new SimpleBuzzer(GetBuzzerConfig());
+// 	cam=new k60::Ov7725(GetCamConfig());
+// 	cam->Start();
 
-	LcdTypewriter::Config LcdWconfig;
-	LcdWconfig.lcd = LCD;
-	LCDwriter = new LcdTypewriter(LcdWconfig);
+ 	LcdTypewriter::Config LcdWconfig;
+ 	LcdWconfig.lcd = LCD;
+ 	LCDwriter = new LcdTypewriter(LcdWconfig);
 
-	memset(data, 0, 8 * 600);
-	memset(image, false, true * 80 * 60);
+// 	memset(data, 0, 8 * 600);
+// 	memset(image, false, true * 80 * 60);
 
 }
 

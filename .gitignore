@@ -1,0 +1,7 @@
+
+*/*
+!inc/*
+!src/*
+.project
+.cproject
+.DS_Store
